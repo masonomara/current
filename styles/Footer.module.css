@@ -1,0 +1,52 @@
+.wrapper {
+  width: 100%;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 12px 16px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.logo {
+  color: black;
+  font-weight: 600;
+  font-size: 100%;
+  line-height: 60%;
+  width: 100%;
+  max-width: 1128px;
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  align-items: flex-start;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 1vw 0px;
+}
+.link {
+  margin: auto;
+  color: #000;
+  font-family: 'BLMelodyMono';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  width: fit-content;
+  height: 44px;
+  align-items: center;
+  display: flex;
+}
+.socialLink__container {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.socialLink__wrapper {
+  height: 38px;
+  width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -15,8 +15,8 @@ export default function ServiceCard({ service }) {
           <div className={styles.title}>
             <span>{service.fields.title}</span>
           </div>
-          <div className={styles.industry}>
-            <span>{service.fields.excerpt}</span>
+          <div className={styles.description}>
+            <span>{service.fields.shortDescription}</span>
           </div>
         </div>
       </div>

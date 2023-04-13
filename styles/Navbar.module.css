@@ -30,7 +30,7 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 28px;
-  color: black;
+  color: #3D3D3B;
   transition: 400ms ease-out all;
 }
 .logo__pre {
@@ -68,7 +68,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #3D3D3B;
   letter-spacing: -0.03em;
   transition: 400ms ease-out all;
 }

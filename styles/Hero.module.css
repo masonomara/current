@@ -15,7 +15,7 @@
   margin: auto;
   width: fit-content;
   height: fit-content;
-  color: white;
+  color: white!important;
   display: flex;
   align-items: center;
   justify-content: center;

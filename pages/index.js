@@ -4,6 +4,8 @@ import Description from '../components/description'
 import ServiceCard from '../components/serviceCard';
 import Hero from '../components/hero'
 
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { createClient } from 'contentful'
 
@@ -47,16 +49,21 @@ export default function Home({ clientProps, serviceProps }) {
         description="A combined 20 years of experience in our specialized services. We are proud to present scalable and flexible content and services that improve your bottom line."
         border={ false }
       />
-
-          {
-          serviceProps.map((service) => (
-
-            <ServiceCard
-              service={service}
-              key={service.fields.id}
-            />
-            ))}
-
+      <div className="swiper-wrapper__wrapper">
+        <Swiper
+          navigation
+          spaceBetween={16}
+          slidesPerView={1.15}
+          pagination={{clickable: true}}
+          loop={false}
+        >
+          {serviceProps.map((service) => (
+            <SwiperSlide key={service.fields.id}>
+              <ServiceCard service={service} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
       <Description 
         title="Themes"
         description="Consistent themes in our work include projects that have an opportunity to bring people together and projects involved in fields that we are passionate about. These types of projects include events, music, renewable and eco-friendly products, food and drink, travel, outdoor sports, fashion, design, and connecting people."

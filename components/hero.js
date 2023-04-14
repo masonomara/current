@@ -7,7 +7,7 @@ import { Red_Hat_Display, Red_Hat_Text } from 'next/font/google'
 import { Red_Hat_Mono } from 'next/font/google'
 
 const redHatDisplay = Red_Hat_Display({
-  weight: ['700'],
+  weight: ['600'],
   style: ['normal'],
   subsets: ['latin'],
 })
@@ -33,7 +33,7 @@ export default function Hero(props) {
       <div className={styles.wrapper}>
         <div className={styles.overlay} />
         <div className={styles.title__wrapper}>
-          <div className={`${styles.title} ${redHatDisplay.className}`}>
+          <div className={`${styles.title} ${redHatText.className}`}>
             <span>{title}</span>
           </div>
           { title && (

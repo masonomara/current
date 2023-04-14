@@ -1,4 +1,4 @@
 <svg width="8" height="59" viewBox="0 0 8 59" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.00023 0H5.00023V50H3.00023V0Z" fill="#ffffff"/>
-<path d="M4.00023 59L7.46434 47H0.536133L4.00023 59Z" fill="#ffffff"/>
+<path d="M3.00023 0H5.00023V50H3.00023V0Z" fill="var(--white)"/>
+<path d="M4.00023 59L7.46434 47H0.536133L4.00023 59Z" fill="var(--white)"/>
 </svg>

@@ -1,20 +1,20 @@
 .wrapper {
   width: 100%;
-  border-top: 1px solid rgba(61,61,59,0.08);
+  border-top: 1px solid var(--black-light);
   padding: 12px 16px;
   height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  background-color: var(--white);
 }
 .logo {
-  color: #3D3D3B;
+  color: var(--black);
   font-weight: 600;
   font-size: 100%;
   line-height: 60%;
   width: 100%;
-  max-width: 1128px;
   display: flex;
   height: fit-content;
   justify-content: center;
@@ -26,7 +26,7 @@
 }
 .link {
   margin: auto;
-  color: #3D3D3B;
+  color: var(--black);
   font-family: 'BLMelodyMono';
   font-style: normal;
   font-weight: 500;
@@ -49,6 +49,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #3D3D3B;
-  fill: #3D3D3B;
+  color: var(--black);
+  fill: var(--black);
 }

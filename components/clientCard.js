@@ -2,13 +2,13 @@ import styles from '../styles/clientCard.module.css'
 import React from 'react'
 import Link from 'next/link'
 
-export default function ClientCard({ client }) {
+export default function ClientCard({ client, fullWidth }) {
 
   console.log(client)
 
   return (
     <>
-      <div className={styles.wrapper}>
+      <div className={`${styles.wrapper} ${ fullWidth && styles.wrapper__full}`}>
         <div className={styles.photo} style={{backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`}} />
 
         <div className={styles.info__wrapper}>

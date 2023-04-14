@@ -9,7 +9,7 @@
   position: relative;
   width: 100%;
   height: 60px;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(251, 249, 244, 0.95);
   backdrop-filter: blur(3px);
   position: fixed;
   top: 0px;
@@ -17,7 +17,7 @@
   z-index: 600;
 }
 .wrapper__pre {
-  background: rgba(255, 255, 255, 0.0)!important;
+  background: rgba(251, 249, 244, 0.0)!important;
   backdrop-filter: blur(0px)!important;
   transition: 200ms ease-in all;
 }
@@ -30,11 +30,11 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 28px;
-  color: #3D3D3B;
+  color: var(--black);
   transition: 400ms ease-out all;
 }
 .logo__pre {
-  color: white!important;
+  color: var(--white)!important;
   transition: 200ms ease-in all;
 }
 .menu__wrapper {
@@ -68,12 +68,12 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: #3D3D3B;
+  color: var(--black);
   letter-spacing: -0.03em;
   transition: 400ms ease-out all;
 }
 .menu__link__pre {
-  color: white!important;
+  color: var(--white)!important;
   transition: 200ms ease-in all;
 }
 .link__space {

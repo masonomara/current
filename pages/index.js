@@ -2,9 +2,10 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Description from '../components/description'
 import ServiceCard from '../components/serviceCard';
+import ClientCard from '../components/clientCard';
 import Hero from '../components/hero'
+import styles from "../styles/home.module.css"
 
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { createClient } from 'contentful'
@@ -18,9 +19,10 @@ export async function getStaticProps() {
     accessToken: contentfulAccessKey,
   });
   const serviceRes = await client.getEntries({ content_type: 'service' });
+  const clientRes = await client.getEntries({ content_type: 'client' });
 
   return {
-    props: { serviceProps: serviceRes.items },
+    props: { serviceProps: serviceRes.items, clientProps: clientRes.items },
   };
 
 }
@@ -29,7 +31,7 @@ export async function getStaticProps() {
 
 export default function Home({ clientProps, serviceProps }) {
 
-  console.log("serviceprps", serviceProps)
+console.log(clientProps)
 
   return (
     <Layout>
@@ -49,6 +51,21 @@ export default function Home({ clientProps, serviceProps }) {
         description="A combined 20 years of experience in our specialized services. We are proud to present scalable and flexible content and services that improve your bottom line."
         border={ false }
       />
+      <div className="swiper-wrapper__wrapper__big">
+        <Swiper
+          navigation
+          spaceBetween={16}
+          slidesPerView={2.15}
+          pagination={{clickable: true}}
+          loop={false}
+        >
+          {serviceProps.map((service) => (
+            <SwiperSlide key={service.fields.id}>
+              <ServiceCard service={service} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
       <div className="swiper-wrapper__wrapper">
         <Swiper
           navigation
@@ -74,6 +91,17 @@ export default function Home({ clientProps, serviceProps }) {
         description="A common theme in our work is promoting content that we’re both passionate about and creates opportunities to bring people together."
         border={ false }
       />
+      <div className={styles.clientList}>
+      {
+          clientProps.map((client) => (
+             (<ClientCard
+              key={client.fields.id}
+              client={client}
+              fullWidth={true}
+            />)
+          ))
+        }
+      </div>
     </Layout>
   )
 }

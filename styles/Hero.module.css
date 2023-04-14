@@ -15,7 +15,7 @@
   margin: auto;
   width: fit-content;
   height: fit-content;
-  color: white!important;
+  color: var(--white)!important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@
   right: 0;
   bottom: 112px;
   margin: auto;
-  color: #ffffff;
+  color: var(--white);
   font-family: 'BLMelodyMono';
   font-style: normal;
   font-weight: 500;

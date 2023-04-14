@@ -5,5 +5,28 @@
   column-gap: 12px;
   row-gap: 32px;
   height: fit-content;
-  padding: 32px 16px 96px 16px;
+  max-width: 1128px;
+  padding: 32px 0px 96px 200px;
+}
+@media (max-width:1439px) {
+  .container__two {
+    width: 100%;
+    max-width: 1200px;
+    padding: 32px 200px 96px 200px;
+  }
+}
+@media (max-width:1239px) {
+  .container__two {
+    padding: 32px 0px 96px 100px;
+  }
+}
+@media (max-width:899px) {
+  .container__two {
+    padding: 32px 24px 96px 24px;
+  }
+}
+@media (max-width: 599px) {
+  .container__two {
+    padding: 32px 16px 96px 16px;
+  }
 }

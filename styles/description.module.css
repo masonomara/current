@@ -1,31 +1,22 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 5px;
-  padding: 64px 0px 32px 200px;
+  width: 100%;
+  height: fit-content;
+  position: sticky;
+  top: 66px;
+  gap: 48px;
+  min-width: 165px;
+
 }
-@media (max-width:1439px) {
+@media (max-width:599px) {
   .wrapper {
-    width: 100%;
-    max-width: 100%;
-    padding: 64px 200px 32px 200px;
-  }
-}
-@media (max-width:1239px) {
-  .wrapper {
-    padding: 64px 0px 32px 100px;
-  }
-}
-@media (max-width:899px) {
-  .wrapper {
-    padding: 64px 24px 32px 24px;
-  }
-}
-@media (max-width: 599px) {
-  .wrapper {
-    padding: 64px 16px 32px 16px;
+    max-width: 252px;
+    top:0px;
+    position: relative;
+    margin-bottom: 25px;
   }
 }
 .border {
@@ -33,16 +24,17 @@
 }
 .title {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 21px;
   max-width: 800px;
+  color: var(--black);
   text-transform: uppercase;
 }
 .description {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 19px;
   color: var(--black);
   max-width: 550px;
 }
@@ -59,7 +51,5 @@
 font-size: 14px;
   justify-content: flex-start;
   justify-content: flex-start;
-  font-family: BLMelodyMono;
   text-transform: uppercase;
-  letter-spacing: -0.03em;
 }

@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Description from '../components/description'
 import Hero from '../components/hero'
 import ServiceList from '../components/serviceList'
+import styles from '../styles/services.module.css'
 
 import { createClient } from 'contentful'
 
@@ -22,6 +23,9 @@ export async function getStaticProps() {
 
 }
 
+
+
+
 export default function Services({ serviceProps }) {
   return (
     <Layout>
@@ -31,17 +35,19 @@ export default function Services({ serviceProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero 
-        title="SERVICES"
+        title="Services"
       />
-      <Description 
-        title="Our Services"
-        description="A combined 20 years of experience in our specialized services. We are proud to present scalable and flexible content and services that improve your bottom line."
-        border={ true }
-      />
-      <ServiceList
-        width="2"
-        serviceProps={serviceProps}
-      />
+      <div className={styles.container}>
+        <Description 
+          title="CURRENT : SERVICES"
+          description="A combined 20 years of experience in our specialized services. We are proud to present scalable and flexible content and services that improve your bottom line."
+          border={ false }
+        />
+        <ServiceList
+          width="2"
+          serviceProps={serviceProps}
+        />
+      </div>
     </Layout>
   )
 }

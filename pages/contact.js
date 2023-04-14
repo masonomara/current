@@ -14,8 +14,8 @@ export default function Contact() {
       <Description 
         title="Contact Us"
         description="Our relationship with clients begin with strategy and how we will improve their business metrics, and continue with providing services such as concept development, content creation, packaging, photography, tech development, marketing campaigns, and video. We are founded and based in Asbury Park, New Jersey."
-        link="info@currentmediacompany.com"
-        linkhref="mailto:info@currentmediacompany.com"
+        link="email : info@currentmediacompany.com"
+        linkhref="mailto:email : info@currentmediacompany.com"
         border={ true }
         spacer={ true }
       />

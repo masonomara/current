@@ -13,8 +13,8 @@ export default function Footer() {
     <>
       <div className={styles.wrapper}>
         <CurrentLogo className={styles.logo} />
-        <Link className={styles.link} href="mailto:info@currentmediacompany.com" target="_blank" passHref scroll={false}>
-          <span>[info@currentmediacompany.com]</span>
+        <Link className={styles.link} href="mailto:email : info@currentmediacompany.com" target="_blank" passHref scroll={false}>
+          <span>email : info@currentmediacompany.com</span>
         </Link>
         <div className={styles.socialLink__container}>
           <Link className={styles.socialLink__wrapper} href="https://vimeo.com/currentmedia?embedded=true&source=owner_name&owner=149610989" target="_blank" passHref scroll={false}>

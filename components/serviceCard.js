@@ -1,6 +1,13 @@
 import styles from '../styles/serviceCard.module.css'
 import React from 'react'
-import Link from 'next/link'
+import { Red_Hat_Mono } from 'next/font/google'
+
+
+const redHatMono = Red_Hat_Mono({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+})
 
 export default function ServiceCard({ service }) {
 
@@ -10,13 +17,9 @@ export default function ServiceCard({ service }) {
     <>
       <div className={styles.wrapper}>
       <div className={styles.photo} style={{backgroundImage: `url('https:${service.fields.featuredImage.fields.file.url}')`}} />
-
         <div className={styles.info__wrapper}>
-          <div className={styles.title}>
-            <span>{service.fields.title}</span>
-          </div>
-          <div className={styles.description}>
-            <span>{service.fields.shortDescription}</span>
+          <div className={`${styles.title} ${redHatMono.className}`}>
+            <span>SERVICE : {service.fields.title}</span>
           </div>
         </div>
       </div>

@@ -1,9 +1,8 @@
 .wrapper {
   width: 100%;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: clamp(9px, 1.5vw, 17px);
 }
 .photo {
   aspect-ratio: 16 / 9;
@@ -17,21 +16,37 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  text-transform: uppercase;
 }
 .title {
-  font-family: BLMelodyMono;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-    letter-spacing: -0.03em;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
 }
 .description {
-  font-family: BLMelodyMono;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: -0.03em;
+  font-size: 13px;
+  line-height: 16px;
   max-width: 550px;
+  text-transform: uppercase;
+}
+@media (max-width:599px) {
+  .title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+  .description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    max-width: 550px;
+    text-transform: uppercase;
+  }
 }

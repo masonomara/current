@@ -128,7 +128,7 @@
 
 :root {
   --black-light: #E0DFDB;
-  --black: #363D3F;
+  --black: #212526;
   --white: #FBF9F4;
 }
 
@@ -140,9 +140,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: BLMelody, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    color: var(--black);
 }
 
 a {
@@ -152,10 +149,10 @@ a {
 
 * {
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+
 }
+
+
 
 /*@media (prefers-color-scheme: dark) {
   html {
@@ -202,27 +199,9 @@ a {
     display: none;
   }
 }
+
 .swiper-wrapper__wrapper {
   display: none;
-}
-@media (max-width:1439px) {
-  .swiper-wrapper__wrapper {
-    display: none;
-    overflow: hidden;
-  }
-}
-@media (max-width:1239px) {
-  .swiper-wrapper__wrapper {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin-top: -8px;
-    border-bottom: 1px solid var(--black-light);
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    padding: 0px 64px 96px 100px;
-  }
 }
 @media (max-width:899px) {
   .swiper-wrapper__wrapper {

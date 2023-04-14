@@ -4,7 +4,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 16px;
+  padding: 12px 24px;
   gap: 18px;
   position: relative;
   width: 100%;
@@ -15,6 +15,14 @@
   top: 0px;
   transition: 200ms ease-out all;
   z-index: 600;
+}
+@media (max-width:599px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 12px 16px;
+    column-gap: 24px;
+  }
 }
 .wrapper__pre {
   background: rgba(251, 249, 244, 0.0)!important;
@@ -27,7 +35,8 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   font-size: 22px;
   line-height: 28px;
   color: var(--black);
@@ -57,10 +66,9 @@
   }
 }
 .menu__link {
-  font-family: BLMelodyMono;
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   height: 44px;
@@ -69,15 +77,11 @@
   justify-content: center;
   align-items: center;
   color: var(--black);
-  letter-spacing: -0.03em;
   transition: 400ms ease-out all;
 }
 .menu__link__pre {
   color: var(--white)!important;
   transition: 200ms ease-in all;
-}
-.link__space {
-  font-size: 6px;
 }
 .menu__link:hover,
 .menu__link:active,
@@ -85,4 +89,11 @@
 .menu__link__pre:hover,
 .menu__link__pre:active,
 .menu__link__pre:focus {
+}
+
+
+.logo:hover, .menu__link:hover { 
+  outline: none; /* Remove the default focus outline */
+  text-shadow: 0px 2px 5px rgba(222, 165, 69, 0.95);
+  transition: 300ms ease-out all;
 }

@@ -3,11 +3,32 @@ import styles from "../styles/Navbar.module.css"
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
+import { DM_Serif_Display, Red_Hat_Display, Red_Hat_Text, Roboto_Mono } from 'next/font/google'
+import { Red_Hat_Mono } from 'next/font/google'
+
+const redHatDisplay = Red_Hat_Display({
+  weight: ['700'],
+  style: ['normal'],
+  subsets: ['latin'],
+})
+
+const redHatText = Red_Hat_Text({
+  weight: ['600'],
+  style: ['normal'],
+  subsets: ['latin'],
+})
+
+const redHatMono = Red_Hat_Mono({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+})
+
 const navigation = [
-  { id: '1', title: 'Work', href: '/work', target: '_top' },
-  { id: '2', title: 'Services', href: '/services', target: '_top' },
-  { id: '3', title: 'About', href: '/about', target: '_top' },
-  { id: '4', title: 'Contact', href: '/contact', target: '_top' },
+  { id: '01', title: 'Work', href: '/work', target: '_top' },
+  { id: '02', title: 'Services', href: '/services', target: '_top' },
+  { id: '03', title: 'About', href: '/about', target: '_top' },
+  { id: '04', title: 'Contact', href: '/contact', target: '_top' },
 ]
 
 
@@ -36,14 +57,14 @@ export default function Navbar() {
   return (
     <>
       <div className={`${styles.wrapper} ${pathname === "/" | pathname === "/work" | pathname === "/services" | pathname === "/about" && startScroll === false ? styles.wrapper__pre : ""}`}>
-        <Link className={`${styles.logo} ${pathname === "/" | pathname === "/work" | pathname === "/services" | pathname === "/about" && startScroll === false ? styles.logo__pre : ""}`} href="/" target="_top" passHref scroll={false}>
+        <Link className={`${styles.logo} ${redHatDisplay.className} ${pathname === "/" | pathname === "/work" | pathname === "/services" | pathname === "/about" && startScroll === false ? styles.logo__pre : ""}`} href="/" target="_top" passHref scroll={false}>
           <span>CURRENT</span>
         </Link>
         <div className={styles.menu__wrapper}>
           {
             navigation.map((item) => (
-              <Link key={item.id} className={`${styles.menu__link} ${pathname === "/" | pathname === "/work" | pathname === "/services" | pathname === "/about" && startScroll === false ? styles.menu__link__pre : ""}`} href={item.href} target={item.target} passHref scroll={false}>
-                <span className={styles.link__title}>[{item.id}]</span>
+              <Link key={item.id} className={`${styles.menu__link} ${redHatMono.className} ${pathname === "/" | pathname === "/work" | pathname === "/services" | pathname === "/about" && startScroll === false ? styles.menu__link__pre : ""}`} href={item.href} target={item.target} passHref scroll={false}>
+                <span className={styles.link__title}>{item.id}</span>
                 <span className={styles.link__space}>&nbsp;</span>
                 <span className={styles.link__title}>{item.title}</span>
               </Link>

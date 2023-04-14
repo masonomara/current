@@ -37,8 +37,7 @@ export default function Work({ clientProps }) {
       />
       <Description 
         title="Our Work"
-        description="A common theme in our work is promoting content that we’re both passionate about and creates opportunities to bring people together."
-        border={ true }
+        description="A common theme in our work is content we’re passionate about and creating opportunities to bring people together."        border={ true }
       />
       <ClientList
         width="2"

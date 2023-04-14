@@ -5,7 +5,7 @@ import ServiceCard from '../components/serviceCard';
 import ClientCard from '../components/clientCard';
 import Hero from '../components/hero'
 import ServiceList from '../components/serviceList'
-import styles from "../styles/home.module.css"
+import styles from "../styles/Home.module.css"
 
 import { Red_Hat_Display } from 'next/font/google'
 import { Red_Hat_Mono } from 'next/font/google'

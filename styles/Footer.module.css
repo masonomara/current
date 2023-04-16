@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   border-top: 1px solid var(--black-light);
-  padding: 12px 16px;
+  padding: 32px 16px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -24,11 +24,16 @@
   flex-grow: 0;
   margin: 1vw 0px;
 }
+.link:hover{
+  outline: none; /* Remove the default focus outline */
+  text-shadow: 0px 2px 6px rgba(222, 165, 69, 0.95);
+  transition: 300ms ease-out all;
+}
 .link {
   margin: auto;
   color: var(--black);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
@@ -50,4 +55,9 @@
   justify-content: center;
   color: var(--black);
   fill: var(--black);
+}
+.socialLink__wrapper:hover svg path{
+outline: none; /* Remove the default focus outline */
+filter: drop-shadow(0px 2px 6px rgba(222, 165, 69, 0.95));
+transition: 300ms ease-out all;
 }

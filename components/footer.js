@@ -8,12 +8,20 @@ import { BsInstagram } from 'react-icons/bs'
 import { BsFacebook } from 'react-icons/bs'
 import { BsLinkedin } from 'react-icons/bs'
 
+import { Red_Hat_Mono } from 'next/font/google'
+
+const redHatMono = Red_Hat_Mono({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+})
+
 export default function Footer() {
   return (
     <>
       <div className={styles.wrapper}>
         <CurrentLogo className={styles.logo} />
-        <Link className={styles.link} href="mailto:email : info@currentmediacompany.com" target="_blank" passHref scroll={false}>
+        <Link className={` ${redHatMono.className} ${styles.link}`} href="mailto:email : info@currentmediacompany.com" target="_blank" passHref scroll={false}>
           <span>email : info@currentmediacompany.com</span>
         </Link>
         <div className={styles.socialLink__container}>

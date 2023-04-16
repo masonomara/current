@@ -21,12 +21,9 @@ export default function ClientCard({ client, fullWidth }) {
         <div className={styles.info__wrapper}>
           <div className={`${styles.title} ${redHatMono.className}`}>
             <span>CLIENT&nbsp;: {client.fields.title}</span>
-          </div>
-          <div className={`${styles.industry} ${redHatMono.className}`}>
+            &nbsp;&nbsp;&nbsp;&nbsp;
             <span>INDUSTRY : {client.fields.industry}</span>
-          </div>
-          <div className={`${styles.service__container} ${redHatMono.className}`}>
-            SERVICES&nbsp;:&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;SERVICES&nbsp;:&nbsp;
             {
               client.fields.services.map((service) => (
                 <React.Fragment key={service.fields.id}>
@@ -35,6 +32,10 @@ export default function ClientCard({ client, fullWidth }) {
                 </React.Fragment>
               ))
             }
+          </div>
+          <div className={`${styles.industry} ${redHatMono.className}`}>
+          </div>
+          <div className={`${styles.service__container} ${redHatMono.className}`}>
           </div>
         </div>
       </div>

@@ -12,11 +12,10 @@ const redHatMono = Red_Hat_Mono({
 
 export default function ClientCard({ client, fullWidth }) {
 
-  console.log(client)
-
   return (
     <>
-      <div className={`${styles.wrapper} ${ fullWidth && styles.wrapper__full}`}>
+      <Link className={`${styles.wrapper} ${ fullWidth && styles.wrapper__full}`} target="_top" href={`${client.fields.slug}`}>
+      
         <div className={styles.photo} style={{backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`}} />
         <div className={styles.info__wrapper}>
           <div className={`${styles.title} ${redHatMono.className}`}>
@@ -27,7 +26,7 @@ export default function ClientCard({ client, fullWidth }) {
             {
               client.fields.services.map((service) => (
                 <React.Fragment key={service.fields.id}>
-                  <Link href={`/service/${service.fields.slug}`} className={`${styles.service} ${redHatMono.className}`}>{service.fields.title}</Link>
+                  <span className={`${styles.service} ${redHatMono.className}`}>{service.fields.title}</span>
                   {service < service.length - 1 && "  "}
                 </React.Fragment>
               ))
@@ -38,7 +37,7 @@ export default function ClientCard({ client, fullWidth }) {
           <div className={`${styles.service__container} ${redHatMono.className}`}>
           </div>
         </div>
-      </div>
+      </Link>
     </>
   )
 }

@@ -997,7 +997,14 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     "to-fast-properties" "^2.0.0"
 
-"@contentful/rich-text-types@^16.0.2":
+"@contentful/rich-text-react-renderer@^15.16.3":
+  "integrity" "sha512-aFtgKn8Yt19qpsez9RdV65/khPhy7GnWXhjhiCMSDVY9vDwyPIPfoKkInt+vePAk7rxlleXds5s7ba6Sm5zKQg=="
+  "resolved" "https://registry.npmjs.org/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-15.16.3.tgz"
+  "version" "15.16.3"
+  dependencies:
+    "@contentful/rich-text-types" "^16.0.3"
+
+"@contentful/rich-text-types@^16.0.2", "@contentful/rich-text-types@^16.0.3":
   "integrity" "sha512-BsUtXj93jo5XUt0YeUwfCkMWRoZIzJDPUIY4vMy9SwGIO9olTsMoQKadjA2ktlmK+Gg6710WH3eFKZxj2q39Iw=="
   "resolved" "https://registry.npmjs.org/@contentful/rich-text-types/-/rich-text-types-16.0.3.tgz"
   "version" "16.0.3"
@@ -3086,7 +3093,7 @@
   "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   "version" "1.2.3"
 
-"react-dom@^18.2.0", "react-dom@18.2.0":
+"react-dom@^16.8.6 || ^17.0.0 || ^18.0.0", "react-dom@^18.2.0", "react-dom@18.2.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -3104,7 +3111,7 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
 
-"react@*", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@18.2.0":
+"react@*", "react@^16.8.6 || ^17.0.0 || ^18.0.0", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"

@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Description from '../components/description'
 import ClientList from '../components/clientList'
 import Hero from '../components/hero'
+import styles from "../styles/Work.module.css"
 
 import { createClient } from 'contentful'
 
@@ -17,11 +18,9 @@ export async function getStaticProps() {
     accessToken: contentfulAccessKey,
   });
   const clientRes = await client.getEntries({ content_type: 'client' });
-
   return {
     props: { clientProps: clientRes.items },
   };
-
 }
 
 export default function Work({ clientProps }) {
@@ -39,8 +38,10 @@ export default function Work({ clientProps }) {
         title="CURRENT : WORK"
         description="A common theme in our work is content we’re passionate about and creating opportunities to bring people together."        border={ true }
       />
+      <div className={styles.filter__wrapper}>
+
+      </div>
       <ClientList
-        width="2"
         clientProps={clientProps}
       />
     </Layout>

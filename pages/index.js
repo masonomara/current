@@ -5,19 +5,30 @@ import ServiceCard from '../components/serviceCard';
 import ClientCard from '../components/clientCard';
 import Hero from '../components/hero'
 import ServiceList from '../components/serviceList'
+import ClientList from '../components/clientList';
 import styles from "../styles/Home.module.css"
+import WavesLogo from "../public/waves.svg"
+import Link from 'next/link';
 
 import { Red_Hat_Display } from 'next/font/google'
 import { Red_Hat_Mono } from 'next/font/google'
 import { Red_Hat_Text } from 'next/font/google'
 
 const redHatMono = Red_Hat_Mono({
-  weight: ['500'],
+  weight: ['400', '600'],
   style: ['normal'],
   subsets: ['latin'],
 })
-
-import { Swiper, SwiperSlide } from 'swiper/react';
+const redHatText = Red_Hat_Text({
+  weight: ['400', '600'],
+  style: ['normal'],
+  subsets: ['latin'],
+})
+const redHatDisplay = Red_Hat_Display({
+  weight: ['700'],
+  style: ['normal'],
+  subsets: ['latin'],
+})
 
 import { createClient } from 'contentful'
 
@@ -29,18 +40,17 @@ export async function getStaticProps() {
     space: spaceId,
     accessToken: contentfulAccessKey,
   });
-  const serviceRes = await client.getEntries({ content_type: 'service' });
   const clientRes = await client.getEntries({ content_type: 'client' });
 
   return {
-    props: { serviceProps: serviceRes.items, clientProps: clientRes.items },
+    props: { clientProps: clientRes.items },
   };
 
 }
 
 
 
-export default function Home({ clientProps, serviceProps }) {
+export default function Home({ clientProps }) {
 
 console.log(clientProps)
 
@@ -58,35 +68,16 @@ console.log(clientProps)
         linkhref="mailto:email : info@currentmediacompany.com"
       />
       <div className={styles.container}>
-        <div className={styles.wrapper}>
-          <Description className={styles.gapper}
-            title="CURRENT : SERVICES"
-            description="A combined 20 years of experience in our specialized services. We are proud to present scalable and flexible content and services that improve your bottom line."
-            border={ false }
-          />
-          <ServiceList
-            width="2"
-            serviceProps={serviceProps}
-          />
-        </div>
-        <div className={styles.wrapper}>
-          <Description 
-            title="CURRENT : SELECTED WORK"
-            description="A common theme in our work is content we’re passionate about and creating opportunities to bring people together."
-          />
-
-        <div className={styles.clientList}>
-        {
-            clientProps.map((client) => (
-              (<ClientCard
-                key={client.fields.id}
-                client={client}
-                fullWidth={true}
-              />)
-            ))
-          }
-        </div>
-        </div>
+          <div className={styles.wrapper}>
+            <Description 
+              title="CURRENT : HOME"
+              description="Current Media Company is a full-service digital content and design company specializing in helping companies we love connect with people."
+            />
+            <ClientList
+              width="2"
+              clientProps={clientProps}
+            />
+          </div>
       </div>
     </Layout>
   )

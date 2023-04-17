@@ -44,7 +44,7 @@ export default function Hero(props) {
         </div>
         { link && (
           <Link className={`${styles.link} ${redHatMono.className}`} href={`${linkhref}`} target="_blank" passHref scroll={false}>
-            <span>{link}</span>
+            <span className={styles.link__text}>{link}</span>
           </Link>
         )}
         <DownArrow className={styles.arrow}/>

@@ -127,8 +127,8 @@
 
 
 :root {
-  --black-light: #E0DFDB;
-  --black: #212526;
+  --black-light: rgb(224, 223, 219);
+  --black: rgb(33, 37, 38);
   --white: #FBF9F4;
 }
 
@@ -140,6 +140,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: var(--white);
 }
 
 a {
@@ -151,6 +152,7 @@ a {
   box-sizing: border-box;
 
 }
+
 
 
 
@@ -241,4 +243,9 @@ a {
   transition-property: transform;
   box-sizing: content-box;
   overflow: hidden;
+}
+
+
+.layout {
+  min-height: 100vh;
 }

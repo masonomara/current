@@ -1,55 +1,37 @@
 .wrapper {
+  padding: 56px 16px 16px 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
-  height: fit-content;
-  position: sticky;
-  top: 66px;
-  gap: 48px;
-  min-width: 165px;
-
+  justify-content: center;
+  gap: 16px;
+  max-width: 700px;
 }
 @media (max-width:599px) {
   .wrapper {
-    max-width: 252px;
-    top:0px;
-    position: relative;
-    margin-bottom: 25px;
+    padding: 32px 16px 16px 16px;
   }
 }
-.border {
-  border-bottom: 1px solid var(--black-light);
-}
 .title {
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 21px;
-  max-width: 800px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
   color: var(--black);
   text-transform: uppercase;
+  padding: 0px 0px 12px 0px;
+  border-bottom: 1px solid var(--black);
+  width: 100%;
 }
 .description {
-  font-style: normal;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 19px;
-  color: var(--black);
-  max-width: 550px;
+  font-size: 22px;
+  line-height: 28px;
 }
-.spacer {
-  padding-top: 96px;
-}
-.link {
-  display: flex;
-  height: 44px;
-  margin-top: 16px;
-  align-items: center;
-  font-weight: 500;
-    max-width: 800px;
-font-size: 14px;
-  justify-content: flex-start;
-  justify-content: flex-start;
-  text-transform: uppercase;
+@media (max-width:599px) {
+  .description {
+
+  }
+  .description span {
+
+  }
 }

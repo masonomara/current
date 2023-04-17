@@ -1,43 +1,53 @@
 import styles from '../styles/clientCard.module.css'
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { Red_Hat_Mono } from 'next/font/google'
 
-
 const redHatMono = Red_Hat_Mono({
-  weight: ['400'],
+  weight: ['400', '500'],
   style: ['normal'],
   subsets: ['latin'],
 })
 
-export default function ClientCard({ client, fullWidth }) {
+export default function ClientCard({ client, fullWidth, nullClientValues }) {
+
+  const [nullValues, setNullValues] = useState(nullClientValues ?? []);
+
+  console.log("clients", client.fields.services.map(service => service.fields.title))
 
   return (
     <>
-      <Link className={`${styles.wrapper} ${ fullWidth && styles.wrapper__full}`} target="_top" href={`${client.fields.slug}`}>
-      
-        <div className={styles.photo} style={{backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`}} />
+      <div
+        className={`${styles.wrapper} ${fullWidth && styles.wrapper__full} ${client.fields.services.some(service => nullValues.includes(service.fields.title)) && styles.wrapper__null}`}
+      >
+        <Link
+          className={styles.photo} style={{backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`}}
+          target="_top"
+          href={`${client.fields.slug}`}
+        />
         <div className={styles.info__wrapper}>
-          <div className={`${styles.title} ${redHatMono.className}`}>
+          <Link
+            className={`${styles.title} ${redHatMono.className}`}
+            target="_top"
+            href={`${client.fields.slug}`}
+          >
             <span>CLIENT&nbsp;: {client.fields.title}</span>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <span>INDUSTRY : {client.fields.industry}</span>
+          </Link>
+          <div className={`${styles.description} ${redHatMono.className}`}>
+            <span>INDUSTRY : <span className={styles.industry}>{client.fields.industry}</span></span>
             &nbsp;&nbsp;&nbsp;&nbsp;SERVICES&nbsp;:&nbsp;
             {
-              client.fields.services.map((service) => (
-                <React.Fragment key={service.fields.id}>
-                  <span className={`${styles.service} ${redHatMono.className}`}>{service.fields.title}</span>
-                  {service < service.length - 1 && "  "}
-                </React.Fragment>
-              ))
-            }
+  client.fields.services.map((service, index) => (
+    <Link key={service.fields.id} href={`/services/${service.fields.slug}`} target="_top">
+      <span className={`${styles.service} ${redHatMono.className}`}>{service.fields.title}</span>
+      {index < client.fields.services.length - 1 && ", "}
+    </Link>
+  ))
+}
           </div>
-          <div className={`${styles.industry} ${redHatMono.className}`}>
-          </div>
-          <div className={`${styles.service__container} ${redHatMono.className}`}>
-          </div>
+
         </div>
-      </Link>
+      </div>
     </>
   )
 }

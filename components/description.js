@@ -9,8 +9,8 @@ const redHatMono = Red_Hat_Mono({
   subsets: ['latin'],
 })
 
-const redHatDisplay = Red_Hat_Text({
-  weight: ['400'],
+const redHatText = Red_Hat_Text({
+  weight: ['300', "600"],
   style: ['normal'],
   subsets: ['latin'],
 })
@@ -21,19 +21,13 @@ export default function Description(props) {
 
   return (
     <>
-      <div className={`${styles.wrapper} ${ border && styles.border} ${ spacer && styles.spacer}`}>
-
-        <div className={`${styles.description} ${redHatDisplay.className}`}>
-          <span>{ description }</span>
-        </div>
+      <div className={styles.wrapper}>
         <div className={`${styles.title} ${redHatMono.className}`}>
           <span>{ title }</span>
         </div>
-        { link && (
-          <Link className={styles.link} href={`${linkhref}`} target="_blank" passHref scroll={false}>
-            <span>{ link }</span>
-          </Link>
-        )}
+        <div className={`${styles.description} ${redHatText.className}`}>
+          <span>{ description }</span>
+        </div>
       </div>
     </>
   )

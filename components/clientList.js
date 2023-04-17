@@ -5,16 +5,17 @@ import styles from "../styles/clientList.module.css"
 import ClientCard from "../components/clientCard.js"
 
 
-export default function ClientList({clientProps}) {
+export default function ClientList({clientProps, nullClientValues}) {
 
   return (
     <>
-      <div className={styles.container__two}>
+      <div className={styles.container}>
         {
           clientProps.map((client) => (
             <ClientCard
               key={client.fields.id}
               client={client}
+              nullClientValues={nullClientValues}
             />
           ))
         }

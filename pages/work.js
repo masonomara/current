@@ -33,10 +33,10 @@ export default function Work({ clientProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero 
-        title="Work"
+        title="Our Work"
       />
       <Description 
-        title="Our Work"
+        title="CURRENT : WORK"
         description="A common theme in our work is content we’re passionate about and creating opportunities to bring people together."        border={ true }
       />
       <ClientList

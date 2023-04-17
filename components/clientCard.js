@@ -9,17 +9,17 @@ const redHatMono = Red_Hat_Mono({
   subsets: ['latin'],
 })
 
-export default function ClientCard({ client, fullWidth, nullClientValues }) {
+export default function ClientCard({ client, fullWidth, activeClientValues }) {
 
-  const [nullValues, setNullValues] = useState(nullClientValues ?? []);
 
-  console.log("clients", client.fields.services.map(service => service.fields.title))
+
+  console.log("activeClientValues: ", activeClientValues)
 
   return (
     <>
       <div
-        className={`${styles.wrapper} ${fullWidth && styles.wrapper__full} ${client.fields.services.some(service => nullValues.includes(service.fields.title)) && styles.wrapper__null}`}
-      >
+className={`${styles.wrapper} ${fullWidth && styles.wrapper__full} ${client.fields.services.some(service => activeClientValues.includes(service.fields.title)) ?  '' : styles.wrapper__null}`}
+>
         <Link
           className={styles.photo} style={{backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`}}
           target="_top"

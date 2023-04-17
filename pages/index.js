@@ -52,7 +52,6 @@ export async function getStaticProps() {
 
 export default function Home({ clientProps }) {
 
-console.log(clientProps)
 
   return (
     <Layout>

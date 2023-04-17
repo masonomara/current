@@ -92,4 +92,11 @@ justify-content: center;
   bottom: 24px;
   margin: auto;
   z-index: 2;
+  transition: 200ms ease-out all;
+  color: var(--white);
+  opacity: 0;
+}
+.arrow__pre {
+  transition: 200ms ease-in all;
+  opacity: 1;
 }

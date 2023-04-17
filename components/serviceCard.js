@@ -11,8 +11,6 @@ const redHatMono = Red_Hat_Mono({
 
 export default function ServiceCard({ service }) {
 
-  console.log(service)
-
   return (
     <>
       <Link className={styles.wrapper} target="_top" href={"services/" + `${service.fields.slug}`}>

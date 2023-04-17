@@ -1,6 +1,7 @@
 import styles from "../styles/Hero.module.css"
 import DownArrow from "../public/downArrow.svg"
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 import { Red_Hat_Display, Red_Hat_Text } from 'next/font/google'
 
@@ -28,6 +29,24 @@ const redHatMono = Red_Hat_Mono({
 export default function Hero(props) {
   const { title, subtitle, link, linkhref } = props;
 
+  const [startScroll, setStartScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window?.innerHeight;
+      const percentScroll = window.scrollY / windowHeight;
+      if (percentScroll > 0) {
+        setStartScroll(true);
+      } else {
+        setStartScroll(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div className={styles.wrapper}>
@@ -47,7 +66,7 @@ export default function Hero(props) {
             <span className={styles.link__text}>{link}</span>
           </Link>
         )}
-        <DownArrow className={styles.arrow}/>
+        <DownArrow className={`${styles.arrow} ${startScroll === false && styles.arrow__pre}`} />
       </div>
     </>
   )

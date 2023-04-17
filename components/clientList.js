@@ -5,7 +5,9 @@ import styles from "../styles/clientList.module.css"
 import ClientCard from "../components/clientCard.js"
 
 
-export default function ClientList({clientProps, nullClientValues}) {
+export default function ClientList({clientProps, activeClientValues}) {
+
+
 
   return (
     <>
@@ -15,7 +17,7 @@ export default function ClientList({clientProps, nullClientValues}) {
             <ClientCard
               key={client.fields.id}
               client={client}
-              nullClientValues={nullClientValues}
+              activeClientValues={activeClientValues}
             />
           ))
         }

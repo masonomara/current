@@ -45,7 +45,8 @@ export async function getStaticProps() {
 
 export default function Work({ clientProps, allServices}) {
 
-  const [activeClientValues, setActiveClientValues] = useState(allServices);
+  const [activeClientValues, setActiveClientValues] = useState(allServices || []);
+
   const [filterMenu, setFilterMenu] = useState(false)
 
 

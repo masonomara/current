@@ -12,9 +12,6 @@ const redHatMono = Red_Hat_Mono({
 export default function ClientCard({ client, fullWidth, activeClientValues }) {
 
 
-
-  console.log("activeClientValues: ", activeClientValues)
-
   return (
     <>
       <div

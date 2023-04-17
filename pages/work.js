@@ -22,6 +22,7 @@ const redHatText = Red_Hat_Text({
   subsets: ['latin'],
 })
 
+
 const spaceId = process.env.CONTENTFUL_SPACE_ID;
 const contentfulAccessKey = process.env.CONTENTFUL_ACCESS_KEY;
 
@@ -33,8 +34,11 @@ export async function getStaticProps() {
     accessToken: contentfulAccessKey,
   });
   const clientRes = await client.getEntries({ content_type: 'client' });
+  console.log("clientRes: ", clientRes)
   const clientProps = clientRes.items;
+  console.log("clientProps: ", clientProps)
   const allServices = clientProps.map(client => client.fields.services.map(service => service.fields.title)).flat();
+  console.log("allServices: ", allServices)
   return {
     props: {
       clientProps,
@@ -55,10 +59,6 @@ export default function Work({ clientProps, allServices}) {
   }, [allServices]);
 
   const clientValues = Array.from(new Set(clientProps.map(client => client.fields.services.map(service => service.fields.title)).flat()));
-
-
-  /* console.log("clients", clientProps.map(client => client.fields.services.map(service => service.fields.title))) */
-
 
 
 

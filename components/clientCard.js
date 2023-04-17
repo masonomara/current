@@ -15,7 +15,7 @@ export default function ClientCard({ client, fullWidth, activeClientValues }) {
   return (
     <>
       <div
-className={`${styles.wrapper} ${fullWidth && styles.wrapper__full} ${client.fields.services.some(service => activeClientValues.includes(service.fields.title)) ?  '' : styles.wrapper__null}`}
+className={`${styles.wrapper} ${fullWidth && styles.wrapper__full} ${client.fields.services.some(service => activeClientValues && activeClientValues.includes(service.fields.title))  ?  '' : styles.wrapper__null}`}
 >
         <Link
           className={styles.photo} style={{backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`}}

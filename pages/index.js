@@ -57,8 +57,8 @@ console.log(clientProps)
   return (
     <Layout>
       <Head>
-        <title>Current Media Company</title>
-        <meta name="description" content="Current Description" />
+        <title>CURRENT MEDIA COMPANY</title>
+        <meta name="description" content="Current Media Company is a full-service digital content and design company specializing in helping companies we love connect with people." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero 

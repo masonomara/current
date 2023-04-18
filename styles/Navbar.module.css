@@ -82,22 +82,6 @@
   transition: 200ms ease-in all;
 }
 
-
-.logo:hover .link__text, .menu__link:hover .link__text, .emailLink:hover .link__text, .service:hover{ 
-  outline: none; /* Remove the default focus outline */
-  background-color: rgba(250, 206, 0, 1);
-  margin: 0px -2px;
-  padding: 0px 2px;
-}
-@media (max-width: 904px) {
-  .logo:hover .link__text, .menu__link:hover .link__text, .emailLink:hover .link__text, .service:hover {
-    background-color: rgba(250, 206, 0, 0);
-  }
-  .logo:active .link__text, .menu__link:active .link__text, .emailLink:active .link__text, .service:active {
-    background-color: rgba(250, 206, 0, 1);
-  }
-}
-
 .emailLink {
 color: var(--black);
 font-style: normal;

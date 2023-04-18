@@ -40,15 +40,17 @@ export default function ClientCard({ client, fullWidth, activeClientValues }) {
             <span>
               INDUSTRY : <span className={styles.industry}>{client.fields.industry}</span>
             </span>
-            &nbsp;&nbsp;&nbsp;&nbsp;SERVICES&nbsp;:&nbsp;
-            {client.fields.services.map((service, index) => (
-              <Link key={service.fields.id} href={`/services/${service.fields.slug}`} target="_top">
-                <span className={`${styles.service} ${redHatMono.className}`}>
-                  {service.fields.title}
-                </span>
-                {index < client.fields.services.length - 1 && ', '}
-              </Link>
-            ))}
+          </div>
+          <div className={`${styles.description} ${redHatMono.className}`}>
+            SERVICES&nbsp;:&nbsp;
+              {client.fields.services.map((service, index) => (
+                <Link key={service.fields.id} href={`/services/${service.fields.slug}`} target="_top">
+                  <span className={`${styles.service} ${redHatMono.className}`}>
+                    {service.fields.title}
+                  </span>
+                  {index < client.fields.services.length - 1 && ', '}
+                </Link>
+              ))}
           </div>
         </div>
       </div>

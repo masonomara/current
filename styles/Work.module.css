@@ -28,23 +28,3 @@
 .services__link {
   width: fit-content;
 }
-.services__link:hover {
-  background-color: rgba(250, 206, 0, 1);
-  cursor: pointer;
-  padding: 0px 2px;
-  margin: 0px -2px;
-}
-.filter__title:hover {
-  background-color: rgba(250, 206, 0, 1);
-  cursor: pointer;
-  padding: 0px 2px;
-  margin: 0px -2px 0px -18px;
-}
-@media (max-width: 904px) {
-  .services__link:hover, .filter__title:hover { 
-    background-color: rgba(250, 206, 0, 0);
-  }
-  .services__link:active, .filter__title:active { 
-    background-color: rgba(250, 206, 0, 1);
-  }
-}

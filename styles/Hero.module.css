@@ -71,20 +71,6 @@ justify-content: center;
     display: flex;
   }
 }
-.link:hover .link__text { 
-  outline: none; /* Remove the default focus outline */
-  background-color: rgba(250, 206, 0, 1);
-  margin: 0px -2px;
-  padding: 0px 2px;
-}
-@media (max-width: 904px) {
-  .link:hover .link__text { 
-    background-color: rgba(250, 206, 0, 0);
-  }
-  .link:active .link__text { 
-    background-color: rgba(250, 206, 0, 1);
-  }
-}
 .arrow {
   position: absolute;
   left: 0;

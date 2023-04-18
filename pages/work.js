@@ -81,7 +81,6 @@ export default function Work({ clientProps, allServices}) {
         <Description 
           title="CURRENT : WORK"
           description="A common theme in our work is content we’re passionate about and creating opportunities to bring people together."        
-          border={ true }
         />
   
         {/* Render the filter menu */}

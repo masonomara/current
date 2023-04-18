@@ -7,8 +7,6 @@ import ClientCard from "../components/clientCard.js"
 
 export default function ClientList({clientProps, activeClientValues}) {
 
-
-
   return (
     <>
       <div className={styles.container}>

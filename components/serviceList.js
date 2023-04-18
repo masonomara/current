@@ -9,7 +9,7 @@ export default function ServiceList({serviceProps}) {
 
   return (
     <>
-      <div className={styles.container__two}>
+      <div className={styles.container}>
         {
           serviceProps.map((service) => (
             <ServiceCard

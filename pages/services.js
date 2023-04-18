@@ -37,17 +37,14 @@ export default function Services({ serviceProps }) {
       <Hero 
         title="Services"
       />
-      <div className={styles.container}>
-        <Description 
-          title="CURRENT : SERVICES"
-          description="A combined 20 years of experience in our specialized services. We are proud to present scalable and flexible content and services that improve your bottom line."
-          border={ false }
-        />
-        <ServiceList
-          width="2"
-          serviceProps={serviceProps}
-        />
-      </div>
+      <Description 
+        title="CURRENT : SERVICES"
+        description="A combined 20 years of experience in our specialized services. We are proud to present scalable and flexible content and services that improve your bottom line."
+      />
+      <ServiceList
+        width="2"
+        serviceProps={serviceProps}
+      />
     </Layout>
   )
 }

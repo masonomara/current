@@ -44,7 +44,7 @@ export default function DescriptionStaff(props) {
           <div className={styles.staff__wrapper}>
             <div className={styles.photo} />
             <div className={styles.staffInfo__wrapper}>
-              <span className={styles.name}>Mason O'Mara</span>
+              <span className={styles.name}>Mason O’Mara</span>
               <span className={styles.title}>Freelance Technical Developer</span>
               <span className={styles.description}>A developer specializing in creative front-end work to help business build up their digital brand. Focuses on projects with Next.js and Shopify.</span>
             </div>

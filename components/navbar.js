@@ -60,6 +60,7 @@ export default function Navbar() {
         <Link className={`${styles.logo} ${redHatDisplay.className} ${pathname === "/" | pathname === "/work" | pathname === "/services" | pathname === "/about" && startScroll === false ? styles.logo__pre : ""}`} href="/" target="_top" passHref scroll={false}>
           <span className={styles.link__text}>CURRENT</span>
         </Link>
+        {/*
         <div className={styles.menu__wrapper}>
           {
             navigation.map((item) => (
@@ -71,6 +72,7 @@ export default function Navbar() {
             ))
           }
         </div>
+        */}
         <Link className={`${styles.emailLink} ${pathname === "/" | pathname === "/work" | pathname === "/services" | pathname === "/about" && startScroll === false ? styles.emailLink__pre : ""}`} target="_top" href="mailto:info@currentmediacompany.com"><span className={`${styles.link__text} ${redHatMono.className}`}>EMAIL : INFO@CURRENTMEDIACOMPANY.COM</span></Link>
       </div>
     </>

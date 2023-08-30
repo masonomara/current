@@ -62,10 +62,11 @@ export default function Home({ clientProps }) {
       </Head>
       <Hero 
         title="Current Media Company"
-        subtitle="share with friends."
+        subtitle="Site currently under maintanence"
         link="email : info@currentmediacompany.com"
         linkhref="mailto:email : info@currentmediacompany.com"
       />
+      {/*
       <div className={styles.container}>
           <div className={styles.wrapper}>
             <Description 
@@ -78,6 +79,7 @@ export default function Home({ clientProps }) {
             />
           </div>
       </div>
+  */}
     </Layout>
   )
 }

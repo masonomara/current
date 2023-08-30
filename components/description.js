@@ -10,7 +10,7 @@ const redHatMono = Red_Hat_Mono({
 })
 
 const redHatText = Red_Hat_Text({
-  weight: ['300', "600"],
+  weight: ['300', "400", "600"],
   style: ['normal'],
   subsets: ['latin'],
 })

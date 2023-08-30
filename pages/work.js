@@ -80,7 +80,7 @@ export default function Work({ clientProps, allServices}) {
         {/* Render the description component */}
         <Description 
           title="CURRENT : WORK"
-          description="A common theme in our work is content we’re passionate about and creating opportunities to bring people together."        
+          description="A common theme in our work is content we're passionate about and creating opportunities to bring people together."        
         />
   
         {/* Render the filter menu */}

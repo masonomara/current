@@ -1,13 +1,14 @@
 import styles from '../styles/clientCard.module.css';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Red_Hat_Mono } from 'next/font/google';
+import { Red_Hat_Mono, Inter } from 'next/font/google';
 
 const redHatMono = Red_Hat_Mono({
   weight: ['400', '500'],
   style: ['normal'],
   subsets: ['latin'],
 });
+
 
 export default function ClientCard({ client, fullWidth, activeClientValues }) {
   return (

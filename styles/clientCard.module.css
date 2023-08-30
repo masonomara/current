@@ -35,15 +35,15 @@
 .title {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 16px;
   padding-top: 9px;
 }
 .description {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 16px;
 } 
 @media(max-width: 599px) {
   .info__wrapper {

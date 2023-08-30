@@ -38,9 +38,9 @@ export default function Footer() {
           <Link className={` ${redHatMono.className} ${styles.link}`} href="mailto:email : info@currentmediacompany.com" target="_blank" passHref scroll={false}>
             <span>email : info@currentmediacompany.com</span>
           </Link>
-          <div className={` ${redHatMono.className} ${styles.not__link}`}>
-            <span>address : 1003 Bond Street, Suite 8, Asbury Park, NJ 07712 </span>
-          </div>
+          <Link className={` ${redHatMono.className} ${styles.link}`} href="https://www.google.com/maps/dir//Current+Media+Company,+1301+Corlies+Ave,+Asbury+Park,+NJ+07712/@40.2100187,-74.026918,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x2aaba72f78ae592f:0x471c3c6409d7ff16!2m2!1d-74.0243431!2d40.2100187!3e0?entry=ttu" target="blank" passHref scroll={false}>
+            <span>address : 1301 Corlies Ave, Suite 2D, Neptune, NJ 07712 </span>
+          </Link>
         </div>
         <div className={styles.bottomInfo__wrapper}>
           <div className={styles.socials__container}>

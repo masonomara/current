@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import { Analytics } from '@vercel/analytics/react';
 
 import { Red_Hat_Display, Red_Hat_Text, Roboto } from 'next/font/google'
 
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
   <div className={redHatText.className}>
     <Component {...pageProps}  />
+    <Analytics />
   </div>
   )
 }

@@ -1,10 +1,16 @@
+/* General Styles */
+
 .wrapper {
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+  text-transform: uppercase;
+  transition: 200ms ease-in all;
 }
+
 .wrapper__full .photo {
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -12,51 +18,85 @@
   background-position: center;
   background-size: cover;
 }
+
 .wrapper__null {
   display: none;
 }
+
 .photo {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 5 / 5;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border: 1px solid rgba(33, 37, 38, 0.05)
+  position: relative;
+  overflow: hidden;
 }
+
+.photo::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* Maintains aspect ratio */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-color: rgba(33, 37, 38, 0.7);
+  mix-blend-mode: multiply;
+  transition: 100ms ease-out opacity;
+  z-index: 2;
+}
+
+.wrapper:hover .overlay {
+  opacity: 1;
+  transition: 100ms ease-in opacity;
+}
+
+/* Info Styles */
+
 .info__wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
-  text-transform: uppercase;
-  transition: 200ms ease-in all;
-}
-.title {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  padding-top: 9px;
-}
-.description {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-} 
-@media(max-width: 599px) {
-  .info__wrapper {
-    gap: 11px;
-    padding-bottom: 22px;
-  }
-  .title {
-    font-size: 11px;
-    line-height: 14px;
-  }
-  .description {
-    font-size: 11px;
-    line-height: 14px;
-  } 
+  gap: 14px;
 }
 
+.title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 125%;
+  letter-spacing: 0.09rem;
+  text-transform: uppercase;
+  padding-top: 13.5px;
+}
+
+.description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 125%;
+  letter-spacing: 0.09rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.service {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 125%;
+  letter-spacing: 0.09rem
+}
+
+/* Responsive Styles */
+
+@media (max-width: 599px) {
+  .info__wrapper {
+    padding-bottom: 22px;
+  }
+
+  .wrapper:hover .overlay {
+    opacity: 0;
+  }
+}

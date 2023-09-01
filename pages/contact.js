@@ -8,7 +8,7 @@ export default function Contact() {
     <Layout>
       <Head>
         <title>CONTACT : CURRENT MEDIA COMPANY</title>
-        <meta name="description" content="Our relationship with clients begin with strategy and how we will improve their business metrics, and continue with providing services such as concept development, content creation, packaging, photography, tech development, marketing campaigns, and video." />
+        <meta name="description" content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Description 

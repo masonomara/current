@@ -1,60 +1,54 @@
-import styles from '../styles/clientCard.module.css';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Red_Hat_Mono, Inter } from 'next/font/google';
-
-const redHatMono = Red_Hat_Mono({
-  weight: ['400', '500'],
-  style: ['normal'],
-  subsets: ['latin'],
-});
-
+import React from "react";
+import Link from "next/link";
+import styles from "../styles/clientCard.module.css";
 
 export default function ClientCard({ client, fullWidth, activeClientValues }) {
+  const hasActiveServices = client.fields.services.some((service) =>
+    activeClientValues.includes(service.fields.title)
+  );
+
   return (
-    <>
+    <Link
+      href={`/clients/${client.fields.slug}`}
+      className={`${styles.wrapper} ${fullWidth && styles.wrapper__full} ${
+        hasActiveServices ? "" : styles.wrapper__null
+      }`}
+    >
       <div
-        className={`${styles.wrapper} ${fullWidth && styles.wrapper__full} ${
-          client.fields.services.some(
-            (service) =>
-              activeClientValues && activeClientValues.includes(service.fields.title)
-          )
-            ? ''
-            : styles.wrapper__null
-        }`}
+        className={styles.photo}
+        style={{
+          backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`,
+        }}
       >
-        <Link
-          className={styles.photo}
-          style={{ backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')` }}
-          target="_top"
-          href={`${client.fields.slug}`}
-        />
-        <div className={styles.info__wrapper}>
-          <Link
-            className={`${styles.title} ${redHatMono.className}`}
-            target="_top"
-            href={`${client.fields.slug}`}
-          >
-            <span>CLIENT&nbsp;: {client.fields.title}</span>
-          </Link>
-          <div className={`${styles.description} ${redHatMono.className}`}>
-            <span>
-              INDUSTRY : <span className={styles.industry}>{client.fields.industry}</span>
-            </span>
+        <div className={styles.overlay} />
+      </div>
+      <div className={styles.info__wrapper}>
+        <div className={styles.title}>
+          <span>CLIENT&nbsp;&nbsp;&nbsp;:&nbsp;{client.fields.title}</span>
+        </div>
+        <div className={`${styles.description}`}>
+          <span>INDUSTRY&nbsp;:&nbsp;</span>
+          <span className={styles.industry}>{client.fields.industry}</span>
+        </div>
+        <div className={`${styles.description}`}>
+          <div>
+            <span>SERVICES&nbsp;:&nbsp;</span>
           </div>
-          <div className={`${styles.description} ${redHatMono.className}`}>
-            SERVICES&nbsp;:&nbsp;
-              {client.fields.services.map((service, index) => (
-                <Link key={service.fields.id} href={`/services/${service.fields.slug}`} target="_top">
-                  <span className={`${styles.service} ${redHatMono.className}`}>
-                    {service.fields.title}
-                  </span>
-                  {index < client.fields.services.length - 1 && ', '}
-                </Link>
-              ))}
+          <div>
+            {client.fields.services.map((service, index) => (
+              <div
+                key={service.fields.id}
+                href={`/services/${service.fields.slug}`}
+              >
+                <span className={`${styles.service}`}>
+                  {service.fields.title}
+                </span>
+                {index < client.fields.services.length - 1 && ", "}
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </>
+    </Link>
   );
 }

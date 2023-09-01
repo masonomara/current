@@ -31,7 +31,7 @@ export default function Services({ serviceProps }) {
     <Layout>
       <Head>
         <title>SERVICES : CURRENT MEDIA COMPANY</title>
-        <meta name="description" content="A combined 20 years of experience in our specialized services. We are proud to present scalable and flexible content and services that improve your bottom line." />
+        <meta name="description" content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero 
@@ -39,7 +39,7 @@ export default function Services({ serviceProps }) {
       />
       <Description 
         title="CURRENT : SERVICES"
-        description="A combined 20 years of experience in our specialized services. We are proud to present scalable and flexible content and services that improve your bottom line."
+        description="Our client relationships are built on a foundation of strategy, innovation, and results. From concept development to content creation, packaging design to tech development, marketing campaigns to impactful videos, we offer personal approaches to improve your business metrics."
       />
       <ServiceList
         width="2"

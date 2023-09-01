@@ -1,139 +1,14 @@
-@font-face {
-  font-family: BLMelody;
-  src: url('/BLMelody/BLMelody-ExtraLight.woff2') format('woff2');
-  src: url('/BLMelody/BLMelody-ExtraLight.woff2') format('woff'),
-      url('/BLMelody/BLMelody-ExtraLight.otf') format('otf');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelody;
-  src: url('/BLMelody/BLMelody-Light.woff2') format('woff2');
-  src: url('/BLMelody/BLMelody-Light.woff2') format('woff'),
-      url('/BLMelody/BLMelody-Light.otf') format('otf');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelody;
-  src: url('/BLMelody/BLMelody-Book.woff2') format('woff2');
-  src: url('/BLMelody/BLMelody-Book.woff2') format('woff'),
-      url('/BLMelody/BLMelody-Book.otf') format('otf');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelody;
-  src: url('/BLMelody/BLMelody-Regular.woff2') format('woff2');
-  src: url('/BLMelody/BLMelody-Regular.woff2') format('woff'),
-      url('/BLMelody/BLMelody-Regular.otf') format('otf');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelody;
-  src: url('/BLMelody/BLMelody-Medium.woff2') format('woff2');
-  src: url('/BLMelody/BLMelody-Medium.woff2') format('woff'),
-      url('/BLMelody/BLMelody-Medium.otf') format('otf');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelody;
-  src: url('/BLMelody/BLMelody-SemiBold.woff2') format('woff2');
-  src: url('/BLMelody/BLMelody-SemiBold.woff2') format('woff'),
-      url('/BLMelody/BLMelody-SemiBold.otf') format('otf');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelody;
-  src: url('/BLMelody/BLMelody-Bold.woff2') format('woff2');
-  src: url('/BLMelody/BLMelody-Bold.woff2') format('woff'),
-      url('/BLMelody/BLMelody-Bold.otf') format('otf');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelodyMono;
-  src: url('/BLMelody/BLMelodyMono-ExtraLight.woff2') format('woff2');
-  src: url('/BLMelody/BLMelodyMono-ExtraLight.woff2') format('woff'),
-      url('/BLMelody/BLMelodyMono-ExtraLight.otf') format('otf');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelodyMono;
-  src: url('/BLMelody/BLMelodyMono-Light.woff2') format('woff2');
-  src: url('/BLMelody/BLMelodyMono-Light.woff2') format('woff'),
-      url('/BLMelody/BLMelodyMono-Light.otf') format('otf');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelodyMono;
-  src: url('/BLMelody/BLMelodyMono-Book.woff2') format('woff2');
-  src: url('/BLMelody/BLMelodyMono-Book.woff2') format('woff'),
-      url('/BLMelody/BLMelodyMono-Book.otf') format('otf');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelodyMono;
-  src: url('/BLMelody/BLMelodyMono-Regular.woff2') format('woff2');
-  src: url('/BLMelody/BLMelodyMono-Regular.woff2') format('woff'),
-      url('/BLMelody/BLMelodyMono-Regular.otf') format('otf');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelodyMono;
-  src: url('/BLMelody/BLMelodyMono-Medium.woff2') format('woff2');
-  src: url('/BLMelody/BLMelodyMono-Medium.woff2') format('woff'),
-      url('/BLMelody/BLMelodyMono-Medium.otf') format('otf');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelodyMono;
-  src: url('/BLMelody/BLMelodyMono-SemiBold.woff2') format('woff2');
-  src: url('/BLMelody/BLMelodyMono-SemiBold.woff2') format('woff'),
-      url('/BLMelody/BLMelodyMono-SemiBold.otf') format('otf');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: BLMelodyMono;
-  src: url('/BLMelody/BLMelodyMono-Bold.woff2') format('woff2');
-  src: url('/BLMelody/BLMelodyMono-Bold.woff2') format('woff'),
-      url('/BLMelody/BLMelodyMono-Bold.otf') format('otf');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 
 :root {
   --black-light: rgb(224, 223, 219);
-  --black: rgb(33, 37, 38);
-  --white: #FBF9F4;
+  --black: rgb(0, 0, 0);
+  --white: hsl(0, 0%, 100%);
+  --yellow: 255, 199, 44
 }
 
 .main {
   background-color: var(--white);
+  max-width: 100%;
 }
 
 html,
@@ -151,6 +26,10 @@ a {
 * {
   box-sizing: border-box;
 
+}
+.nowrap {
+  word-wrap: normal;
+  width: fit-content;
 }
 
 
@@ -251,4 +130,33 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.footer__popup {
+  pointer-events: none;
+  opacity: 0;
+}
+@media screen and (max-width: 599px) {
+  .footer__popup {
+    height: 64px;
+    background-color: rgba(var(--yellow), 0.87);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 800;
+    transition: 200ms ease-out all;
+    opacity: 1;
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.4s 8s ease-out forwards; /* Apply the animation */
+  }
+}
+.footer__popup__button {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
 }

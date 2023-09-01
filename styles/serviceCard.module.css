@@ -1,63 +1,70 @@
+/* General Styles */
+
 .wrapper {
   width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+  text-transform: uppercase;
+  transition: 200ms ease-in all;
 }
-.wrapper__full .photo {
-  aspect-ratio: 1 / 1;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.wrapper__null {
-  display: none;
-}
+
 .photo {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 5 / 5;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border: 1px solid rgba(33, 37, 38, 0.15)
+  position: relative;
+  overflow: hidden;
 }
+
+.photo::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* Maintains aspect ratio */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background-color: rgba(33, 37, 38, 0.7);
+  mix-blend-mode: multiply;
+  transition: 100ms ease-out opacity;
+  z-index: 2;
+}
+
+.wrapper:hover .overlay {
+  opacity: 1;
+  transition: 100ms ease-in opacity;
+}
+
+/* Info Styles */
+
 .info__wrapper {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  text-transform: uppercase;
-  transition: 200ms ease-in all;
-}
-.title {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  padding-top: 9px;
-}
-.description {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-} 
-@media(max-width: 599px) {
-  .title {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    padding-top: 9px;
-  }
-  .description {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-  } 
 }
 
+.title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  padding-top: 13.5px;
+  line-height: 125%;
+  letter-spacing: 0.09rem;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 599px) {
+  .wrapper:hover .overlay {
+    opacity: 0;
+  }
+}

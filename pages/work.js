@@ -49,7 +49,7 @@ export async function getStaticProps() {
 }
 
 // Define the Work page component
-export default function Work({ clientProps, allServices}) {
+export default function Work({ clientProps, allServices }) {
 
   // Set up state for filtering client data
   const [activeClientValues, setActiveClientValues] = useState(allServices || []);
@@ -68,7 +68,7 @@ export default function Work({ clientProps, allServices}) {
       <Layout>
         <Head>
           <title>WORK : CURRENT MEDIA COMPANY</title>
-          <meta name="description" content="A common theme in our work is promoting content that we’re both passionate about and creates opportunities to bring people together. " />
+          <meta name="description" content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services." />
           <link rel="icon" href="/favicon.ico" />
         </Head>
   
@@ -80,7 +80,7 @@ export default function Work({ clientProps, allServices}) {
         {/* Render the description component */}
         <Description 
           title="CURRENT : WORK"
-          description="A common theme in our work is content we're passionate about and creating opportunities to bring people together."        
+          description="Our portfolio is a testament to our dedication to connecting brands and people through captivating digital content. With a combined 20 years of experience in photography, videography, web design, and e-commerce services, we're passionate about turning ideas into impactful realities."        
         />
   
         {/* Render the filter menu */}

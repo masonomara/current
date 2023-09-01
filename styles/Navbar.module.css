@@ -9,8 +9,8 @@
   position: relative;
   width: 100%;
   height: 60px;
-  background: rgba(251, 249, 244, 0.95);
-  backdrop-filter: blur(3px);
+  background: hsla(0, 0%, 100%, 0.93);
+  backdrop-filter: blur(8px);
   position: fixed;
   top: 0px;
   transition: 200ms ease-out all;
@@ -32,9 +32,10 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 22px;
   line-height: 28px;
+  letter-spacing: 0.09rem;
   color: var(--black);
   transition: 400ms ease-out all;
 }
@@ -62,10 +63,10 @@
   }
 }
 .menu__link {
-  font-style: normal;
   font-weight: 500;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 12px;
+  line-height: 125%;
+  letter-spacing: 0.09rem;
   text-transform: uppercase;
   height: 44px;
   display: flex;
@@ -76,6 +77,10 @@
   width: fit-content;
   wrap: nowrap;
   transition: 400ms ease-out all;
+  text-underline-offset: 3px;
+}
+.menu__link:hover {
+  text-decoration: underline;
 }
 .menu__link__pre {
   color: var(--white)!important;
@@ -84,15 +89,20 @@
 
 .emailLink {
 color: var(--black);
-font-style: normal;
 font-weight: 500;
-font-size: 13px;
-line-height: 19px;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: 0.84px;
+text-transform: uppercase;
 white-space: nowrap;
 height: 44px;
 display: flex;
 align-items: center;
 justify-content: center;
+}
+.emailLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .emailLink__pre {
   color: var(--white)!important;

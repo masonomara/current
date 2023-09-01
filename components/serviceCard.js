@@ -1,26 +1,23 @@
-import styles from '../styles/serviceCard.module.css'
-import React from 'react'
-import { Red_Hat_Mono } from 'next/font/google'
-import Link from 'next/link'
-
-const redHatMono = Red_Hat_Mono({
-  weight: ['400'],
-  style: ['normal'],
-  subsets: ['latin'],
-})
+import React from "react";
+import Link from "next/link";
+import styles from "../styles/serviceCard.module.css";
 
 export default function ServiceCard({ service }) {
-
   return (
-    <>
-      <Link className={styles.wrapper} target="_top" href={"services/" + `${service.fields.slug}`}>
-      <div className={styles.photo} style={{backgroundImage: `url('https:${service.fields.featuredImage.fields.file.url}')`}} />
-        <div className={styles.info__wrapper}>
-          <div className={`${styles.title} ${redHatMono.className}`}>
-            <span>SERVICE : {service.fields.title}</span>
-          </div>
+    <Link className={styles.wrapper} href={`/services/${service.fields.slug}`}>
+      <div
+        className={styles.photo}
+        style={{
+          backgroundImage: `url('https:${service.fields.featuredImage.fields.file.url}')`,
+        }}
+      >
+        <div className={styles.overlay} />
+      </div>
+      <div className={styles.info__wrapper}>
+        <div className={styles.title}>
+          <span>SERVICE&nbsp;: {service.fields.title}</span>
         </div>
-      </Link>
-    </>
-  )
+      </div>
+    </Link>
+  );
 }

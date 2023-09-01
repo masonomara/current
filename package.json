@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.16.3",
+    "@next/font": "^13.4.19",
     "@vercel/analytics": "^1.0.2",
     "contentful": "^10.0.0",
     "next": "13.3.0",

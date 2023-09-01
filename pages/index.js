@@ -44,11 +44,11 @@ export default function Home({ clientProps, serviceProps }) {
       </Head>
       <Hero
         title="Current Media Company"
-        subtitle="Share With Friends"
+        subtitle="OUR SITE IS CURRENTLY UNDER CONSTRUCTION"
         link="email : info@currentmediacompany.com"
         linkhref="mailto:email : info@currentmediacompany.com"
       />
-
+{/*
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <Description
@@ -60,13 +60,13 @@ export default function Home({ clientProps, serviceProps }) {
             title="SERVICES : CURRENT MEDIA COMPANY"
             description="• Our client relationships thrive on strategy and service. From concept development to impactful videos and production-level websites, we offer personalized solutions to improve your metrics."
           />
-          {/* <StyleLink href="/services" title="View All Services" /> */}
+          <StyleLink href="/services" title="View All Services" />
           <ServiceList width="2" serviceProps={serviceProps} max={4} />
           <Description
             title="WORK : CURRENT MEDIA COMPANY"
             description="• Our portfolio showcases our dedication to connecting brands with digital content. With 20 years of combined experience in photography, videography, web design, and e-commerce."
           />
-          {/* <StyleLink href="/work" title="View All Work" /> */}
+          <StyleLink href="/work" title="View All Work" />
           <ClientList
             width="2"
             clientProps={clientProps}
@@ -80,6 +80,7 @@ export default function Home({ clientProps, serviceProps }) {
           />
         </div>
       </div>
+      */}
     </Layout>
   );
 }

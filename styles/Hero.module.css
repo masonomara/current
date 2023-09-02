@@ -243,3 +243,8 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+.video__wrapper.wrapper__client {
+  width: calc(100% - 48px);
+  height: calc(100vh - 239px);
+}

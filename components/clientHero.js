@@ -24,11 +24,40 @@ export default function ClientHero({ client }) {
   return (
     <>
       <div
-        className={styles.wrapper__client}
+        className={`${styles.wrapper__client} ${styles.video__wrapper}`}
         style={{
           backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`,
-        }}
-      />
+        }}>
+        <iframe
+        className={styles.video__iframe__desktop}
+        src={`https://player.vimeo.com/video/${client.fields.featuredVideo}?background=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
+        frameBorder="0"
+        allow="autoplay"
+        title="Current Media Company Video for desktop"
+        rel="preconnect"
+        allowFullScreen={true}
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+        muted={true} // Muted autoplay
+        playsInline={true} // Plays inline on iOS
+      ></iframe>
+      <iframe
+        className={styles.video__iframe__mobile}
+        src={`https://player.vimeo.com/video/${client.fields.featuredVideo}?background=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
+        frameBorder="0"
+        allow="autoplay"
+        title="Current Media Company Video for mobile"
+        allowFullScreen={true}
+        rel="preconnect"
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+        muted={true} // Muted autoplay
+        playsInline={true} // Plays inline on iOS
+      ></iframe>
+
+
+</div>
+
       <div className={`${styles.wrapper__title}`}>
         <div className={styles.client__title}>{client.fields.title}</div>
         <div className={`${styles.description}`}>

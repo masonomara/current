@@ -43,7 +43,6 @@ export default function Hero(props) {
             className={`${styles.link}`}
             href={`${linkhref}`}
             target="_blank"
-            passHref
             scroll={false}
           >
             <span className={styles.link__text}>{link}</span>
@@ -54,12 +53,14 @@ export default function Hero(props) {
             startScroll === false && styles.arrow__pre
           }`}
         />
-        <div class={styles.video__wrapper}>
+        <div className={styles.video__wrapper}>
           <iframe
             className={styles.video__iframe__desktop}
             src="https://player.vimeo.com/video/859612802?background=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1"
             frameBorder="0"
             allow="autoplay"
+            title="Current Media Company Video for desktop"
+            rel="preconnect"
             allowFullScreen={true}
             webkitallowfullscreen="true"
             mozallowfullscreen="true"
@@ -71,7 +72,9 @@ export default function Hero(props) {
             src="https://player.vimeo.com/video/859614231?background=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1"
             frameBorder="0"
             allow="autoplay"
+            title="Current Media Company Video for mobile"
             allowFullScreen={true}
+            rel="preconnect"
             webkitallowfullscreen="true"
             mozallowfullscreen="true"
             muted={true} // Muted autoplay

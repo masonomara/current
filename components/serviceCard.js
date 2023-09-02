@@ -4,7 +4,7 @@ import styles from "../styles/serviceCard.module.css";
 
 export default function ServiceCard({ service }) {
   return (
-    <Link className={styles.wrapper} href={`/services/${service.fields.slug}`}>
+    <Link className={`${styles.wrapper} "scrollFade"`} href={`/services/${service.fields.slug}`}>
       <div
         className={styles.photo}
         style={{

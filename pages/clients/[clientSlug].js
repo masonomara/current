@@ -40,8 +40,8 @@ export const getStaticProps = async ({ params }) => {
 export default function ClientPage({ client }) {
   return (
     <Layout>
-      <ClientHero client={client}/>
-      <ClientDescription client={client}/>
+      <ClientHero client={client} />
+      <ClientDescription client={client} />
     </Layout>
   );
 }

@@ -88,17 +88,16 @@
 }
 
 .emailLink {
-color: var(--black);
-font-weight: 500;
-font-size: 12px;
-line-height: 15px;
-letter-spacing: 0.84px;
-text-transform: uppercase;
-white-space: nowrap;
-height: 44px;
-display: flex;
-align-items: center;
-justify-content: center;
+  color: var(--black);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 125%;
+  letter-spacing: 0.09rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .emailLink:hover {
   text-decoration: underline;

@@ -1,7 +1,7 @@
 
 :root {
   --black-light: rgb(224, 223, 219);
-  --black: rgb(0, 0, 0);
+  --black: rgb(33, 37, 38);
   --white: hsl(0, 0%, 100%);
   --yellow: 255, 199, 44
 }
@@ -159,4 +159,41 @@ a {
   font-weight: 400;
   text-decoration: none;
   white-space: nowrap;
+}
+.letterspacing--4{
+  letter-spacing: 0.18rem;
+  font-weight: 400!important;
+  text-shadow: 0.4px 0px 0px var(--black), -0.4px 0px 0px var(--black), 0px 0.3px 0px var(--black), 0px -0.3px 0px var(--black);
+}
+
+.getmeout {
+  font-weight: 500!important;
+  text-shadow: none!important;
+}
+
+.mobile {
+  display: none;
+}
+.desktop {
+  display: inherit;
+}
+.mobile:hover .underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.desktop:hover .underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.boldie {
+  font-weight: 400!important;
+  text-shadow: 0.4px 0px 0px var(--black), -0.4px 0px 0px var(--black), 0px 0.3px 0px var(--black), 0px -0.3px 0px var(--black);
+}
+@media screen and (max-width: 599px) {
+  .mobile {
+    display: inherit;
+  }
+  .desktop {
+    display: none;
+  }
 }

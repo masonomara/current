@@ -1,19 +1,5 @@
 import styles from "../styles/description.module.css"
 
-import { Red_Hat_Mono, Red_Hat_Text } from 'next/font/google'
-
-const redHatMono = Red_Hat_Mono({
-  weight: ['400'],
-  style: ['normal'],
-  subsets: ['latin'],
-})
-
-const redHatText = Red_Hat_Text({
-  weight: ['300', "600"],
-  style: ['normal'],
-  subsets: ['latin'],
-})
-
 export default function DescriptionStaff(props) {
   const { title, description } = props;
 
@@ -21,10 +7,10 @@ export default function DescriptionStaff(props) {
   return (
     <>
       <div className={styles.wrapper}>
-        <div className={`${styles.title} ${redHatMono.className}`}>
+        <div className={`${styles.title}`}>
           <span>{ title }</span>
         </div>
-        <div className={`${styles.staff__container} ${redHatText.className}`}>
+        <div className={`${styles.staff__container}`}>
           <div className={styles.staff__wrapper}>
             <div className={styles.photo} />
             <div className={styles.staffInfo__wrapper}>

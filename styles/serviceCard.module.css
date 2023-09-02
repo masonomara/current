@@ -31,15 +31,13 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  background-color: rgba(33, 37, 38, 0.7);
+  background-color: rgba(33, 37, 38);
   mix-blend-mode: multiply;
-  transition: 100ms ease-out opacity;
   z-index: 2;
 }
 
-.wrapper:hover .overlay {
-  opacity: 1;
-  transition: 100ms ease-in opacity;
+.photo:hover .overlay {
+  opacity: .13;
 }
 
 /* Info Styles */
@@ -64,7 +62,7 @@
 /* Responsive Styles */
 
 @media (max-width: 599px) {
-  .wrapper:hover .overlay {
+  .photo:hover .overlay {
     opacity: 0;
   }
 }

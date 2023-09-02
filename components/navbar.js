@@ -57,12 +57,11 @@ export default function Navbar() {
           }`}
           href="/"
           target="_top"
-          passHref
           scroll={false}
         >
           <span className={styles.link__text}>CURRENT</span>
         </Link>
-        {/*
+        
         <div className={styles.menu__wrapper}>
           {navigation.map((item) => (
             <Link
@@ -78,7 +77,6 @@ export default function Navbar() {
               }`}
               href={item.href}
               target={item.target}
-              passHref
               scroll={false}
             >
               <span
@@ -99,7 +97,6 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-            */}
         <Link
           className={`${styles.emailLink} ${
             (pathname === "/" ||

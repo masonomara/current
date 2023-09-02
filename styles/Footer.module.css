@@ -59,8 +59,8 @@
 .socials__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 12px;
-  row-gap: 12px;
+  column-gap: 16px;
+  row-gap: 16px;
   min-width: 71px;
   max-width: 100%;
   align-items: flex-start;

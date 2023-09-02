@@ -8,7 +8,7 @@
   align-items: flex-start;
   position: relative;
   text-transform: uppercase;
-  transition: 200ms ease-in all;
+  transition: 400ms ease-in all;
 }
 
 .wrapper__full .photo {
@@ -43,15 +43,13 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  background-color: rgba(33, 37, 38, 0.2);
+  background-color: rgba(33, 37, 38);
   mix-blend-mode: multiply;
-  transition: 100ms ease-out opacity;
   z-index: 2;
 }
 
-.wrapper:hover .overlay {
-  opacity: 1;
-  transition: 100ms ease-in opacity;
+.photo:hover .overlay {
+  opacity: 0.13;
 }
 
 /* Info Styles */
@@ -96,7 +94,7 @@
     padding-bottom: 22px;
   }
 
-  .wrapper:hover .overlay {
+  .photo:hover .overlay {
     opacity: 0;
   }
 }

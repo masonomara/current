@@ -1,16 +1,24 @@
-import Link from "next/link";
 import styles from "../styles/description.module.css";
-
-import Image from "next/image";
-
+import StyleLink from "./styleLink";
 
 export default function ClientDescription({ client }) {
+
+  const websiteText = client.fields.website.substring("https://www.".length);
+
   return (
     <>
       <div className={`${styles.wrapper} ${styles.wrapper__client}`}>
         <div className={`${styles.description__client}`}>
-        • {client.fields.shortDescription}
+          • {client.fields.shortDescription}
         </div>
+        <StyleLink
+          href={`${client.fields.website}`}
+          title={`WEBSITE : ${websiteText}`}
+          mobileTitle={websiteText}
+          client={true}
+          newTab={true}
+        />
+          
         <div className={styles.gallery__wrapper}>
           {client.fields.gallery.map((photo) => (
             <div
@@ -27,7 +35,6 @@ export default function ClientDescription({ client }) {
                 backgroundImage: `url('https:${photo.fields.file.url}')`,
               }}
             />
-
           ))}
         </div>
       </div>

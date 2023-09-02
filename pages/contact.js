@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Description from '../components/description'
+import StyleLink from '../components/styleLink'
 
 
 export default function Contact() {
@@ -13,12 +14,16 @@ export default function Contact() {
       </Head>
       <Description 
         title="Contact Us"
-        description="Our relationship with clients begin with strategy and how we will improve their business metrics, and continue with providing services such as concept development, content creation, packaging, photography, tech development, marketing campaigns, and video. We are founded and based in Asbury Park, New Jersey."
-        link="email : info@currentmediacompany.com"
-        linkhref="mailto:email : info@currentmediacompany.com"
-        border={ true }
+        description="Our relationship with clients begin with strategy and how we will improve their business metrics with a user-centric focus, and continue with providing services including photography, video, web design, marketing campaigns, social content, brand assets, e-commerce development and suppport. We are founded and based in Asbury Park, New Jersey."
         spacer={ true }
       />
+      
+                <StyleLink
+            href="mailto:info@currentmediacompany.com"
+            title="EMAIL : info@currentmediacompany.com"
+            mobileTitle="info@currentmediacompany.com"
+            level="1"
+          />
     </Layout>
   )
 }

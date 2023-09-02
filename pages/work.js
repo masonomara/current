@@ -7,18 +7,8 @@ import Hero from '../components/hero';
 import styles from "../styles/Work.module.css";
 import { useState, useEffect } from 'react';
 
-// Import necessary fonts
-import { Red_Hat_Mono } from 'next/font/google';
-
 // Import necessary packages for Contentful integration
 import { createClient } from 'contentful';
-
-// Set up font configurations
-const redHatMono = Red_Hat_Mono({
-  weight: ['400', '600'],
-  style: ['normal'],
-  subsets: ['latin'],
-});
 
 // Set up Contentful access credentials
 const spaceId = process.env.CONTENTFUL_SPACE_ID;
@@ -51,10 +41,12 @@ export async function getStaticProps() {
 // Define the Work page component
 export default function Work({ clientProps, allServices }) {
 
+  console.log("clientProps", clientProps)
+
   // Set up state for filtering client data
   const [activeClientValues, setActiveClientValues] = useState(allServices || []);
   const [filterMenu, setFilterMenu] = useState(false);
-
+  console.log("activeClientValues", activeClientValues)
   // Reset active client values when all services change
   useEffect(() => {
     setActiveClientValues(allServices);
@@ -69,7 +61,7 @@ export default function Work({ clientProps, allServices }) {
         <Head>
           <title>WORK : CURRENT MEDIA COMPANY</title>
           <meta name="description" content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services." />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="preconnect" href="/favicon.ico" />
         </Head>
   
         {/* Render the hero component */}
@@ -87,10 +79,9 @@ export default function Work({ clientProps, allServices }) {
         <div className={styles.filter__wrapper}>
           <div className={styles.filter__title}>
             <span 
-              className={redHatMono.className} 
               onClick={() => setFilterMenu(prevState => !prevState)}>
               {/* Render an up or down arrow, depending on the state of the filter menu */}
-              {filterMenu ? <span>[↑]</span> : <span>[↓]</span> }
+              {filterMenu ? <span className="letterspacing--4">[↑]</span> : <span className="letterspacing--4">[↓]</span> }
               &nbsp;Filter by service
             </span>
           </div>
@@ -100,8 +91,8 @@ export default function Work({ clientProps, allServices }) {
               {/* Render a button to select all services */}
               <div 
                 onClick={() => setActiveClientValues(clientValues)} 
-                className={`${redHatMono.className} ${styles.services__link}`}>
-                {activeClientValues.length > 1 ? <span>[X]</span> : <span>[ ]</span> }
+                className={`${styles.services__link}`}>
+                {activeClientValues.length > 1 ? <span className="letterspacing--4">[<span className="getmeout">X</span>]</span> : <span className="letterspacing--4">[ ]</span> }
                 <span>&nbsp;&nbsp;&nbsp;ALL SERVICES</span>
               </div>
   
@@ -110,9 +101,9 @@ export default function Work({ clientProps, allServices }) {
                 <div 
                   key={value} 
                   onClick={() => setActiveClientValues([value])} 
-                  className={`${redHatMono.className} ${styles.services__link}`}>
+                  className={`${styles.services__link}`}>
                   {/* Render a check mark or a box, depending on whether the service is selected */}
-                  {activeClientValues.includes(value) && activeClientValues.length === 1 ? <span>[X]</span> : <span>[ ]</span> }
+                  {activeClientValues.includes(value) && activeClientValues.length === 1 ? <span className="letterspacing--4">[<span className="getmeout">X</span>]</span> : <span className="letterspacing--4">[ ]</span> }
                   <span>&nbsp;&nbsp;&nbsp;{value}</span>
                 </div>
               ))}

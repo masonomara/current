@@ -19,6 +19,9 @@
   }
 }
 
+.wrapper__blocks, .wrapper__last {
+  padding-bottom: 72px;
+}
 
 
 .title {

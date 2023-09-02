@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 24px 24px 24px 24px;
+  padding: 48px 24px 24px 24px;
   background-color: var(--white);
   width: 100%;
   display: flex;
@@ -9,7 +9,7 @@
 }
 @media screen and (max-width: 599px) {
   .wrapper {
-    padding: 16px 16px 16px 16px;
+    padding: 48px 16px 16px 16px;
   }
 }
 

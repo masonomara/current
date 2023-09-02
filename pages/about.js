@@ -38,7 +38,7 @@ export default function About() {
         descriptionFourTitle="Technology"
         descriptionFour="At the core of our work is a deep appreciation for creativity and originality. We are constantly exploring new ideas for every project."
       />
-      <DescriptionStaff />
+      {/* <DescriptionStaff /> */}
     </Layout>
   )
 }

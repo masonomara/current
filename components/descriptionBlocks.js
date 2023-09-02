@@ -21,7 +21,7 @@ export default function DescriptionBlocks(props) {
 
   return (
     <>
-      <div className={styles.wrapper}>
+      <div className={`${styles.wrapper} ${styles.wrapper__blocks}`}>
         <div className={`${styles.title} ${redHatMono.className}`}>
           <span>{ title }</span>
         </div>

@@ -21,6 +21,7 @@
   .container .wrapper:nth-child(7), .container .wrapper:nth-child(8) {
     display: inherit;
   }
+  
 }
 @media (max-width:1100px) {
   .container {

@@ -177,14 +177,7 @@ a {
 .desktop {
   display: inherit;
 }
-.mobile:hover .underline {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.desktop:hover .underline {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
+
 .boldie {
   font-weight: 400!important;
   text-shadow: 0.4px 0px 0px var(--black), -0.4px 0px 0px var(--black), 0px 0.3px 0px var(--black), 0px -0.3px 0px var(--black);

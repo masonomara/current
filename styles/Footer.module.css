@@ -83,12 +83,8 @@
 }
 
 .link:hover a {
-  text-decoration: underline!important;
-  text-underline-offset: 3px;
 }
 .link__bare:hover {
-  text-decoration: underline!important;
-  text-underline-offset: 3px;
 }
 .tagger {
   grid-row: 1 / 3;

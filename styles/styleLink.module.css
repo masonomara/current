@@ -6,6 +6,18 @@
   letter-spacing: 0.09rem;
   margin-top: -8px;
   font-weight: 500!important;
+  border-radius: 8px;
+}
+.link__wrapper a {
+  margin: -8;
+  padding: 8px;
+  background-color: rgba(0,0,0,.0);
+  transition: 200ms ease-in all;
+  border-radius: 8px;
+}
+.link__wrapper a:hover {
+  background-color: rgba(0,0,0,.05);
+  transition: 200ms ease-out all;
 }
 .wrapper__client {
   padding: 24px 0px 48px 0px;
@@ -57,6 +69,7 @@
   line-height: 100%;
   letter-spacing: 0.09rem;
   text-transform: uppercase;
+  border-radius: 10px;
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -66,10 +79,12 @@
   outline: 0px solid rgb(var(--yellow));
   width: fit-content;
   max-width: calc(100% - 32px);
+  transition: 200ms ease-out all;
 }
 .link__wrapper__yellow:hover {
-  background-color: #E2B22B;
+  background-color: #F2BD2A;
   cursor: pointer;
+  transition: 200ms ease-in all;
 }
 @media (max-width: 599px) {
   .link__wrapper__yellow {

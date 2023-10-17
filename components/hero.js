@@ -2,6 +2,8 @@ import styles from "../styles/Hero.module.css";
 import DownArrow from "../public/downArrow.svg";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { staggerContainer, textVariant } from "../utils/motion";
 
 export default function Hero(props) {
   const { title, subtitle, link, linkhref } = props;
@@ -27,6 +29,12 @@ export default function Hero(props) {
   return (
     <>
       <div className={styles.wrapper}>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0 }}
+      >
         <div className={styles.overlay} />
         <div className={styles.title__wrapper}>
           <div className={`${styles.title}`}>
@@ -81,6 +89,7 @@ export default function Hero(props) {
             playsInline={true} // Plays inline on iOS
           ></iframe>
         </div>
+        </motion.div>
       </div>
     </>
   );

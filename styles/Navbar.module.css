@@ -48,7 +48,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 24px;
+  gap: 8px;
   width: 100%;
   max-width: 100%;
 }
@@ -68,7 +68,9 @@
   line-height: 125%;
   letter-spacing: 0.09rem;
   text-transform: uppercase;
-  height: 44px;
+  height: fit-content;
+  padding: 9px 8px 7px;
+  border-radius: 8px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -80,7 +82,7 @@
   text-underline-offset: 3px;
 }
 .menu__link:hover {
-  text-decoration: underline;
+  background-color: rgba(0,0,0,.05);
 }
 .menu__link__pre {
   color: var(--white)!important;
@@ -98,10 +100,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 9px 8px 7px;
+  margin-right: -8px;
+  border-radius: 8px;
+  transition: 200ms ease-in all;
 }
 .emailLink:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+background: rgba(0,0,0,.05);
+transition: 200ms ease-out all;
 }
 .emailLink__pre {
   color: var(--white)!important;

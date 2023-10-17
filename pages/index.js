@@ -34,23 +34,40 @@ export default function Home({ clientProps, serviceProps }) {
     )
     .flat();
 
-
   return (
     <Layout>
       <Head>
         <title>CURRENT MEDIA COMPANY</title>
-<meta name="title" content="CURRENT MEDIA COMPANY" />
-<meta name="description" content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://currentmediacompany.com/" />
-<meta property="og:title" content="CURRENT MEDIA COMPANY" />
-<meta property="og:description" content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services." />
-<meta property="og:image" content="https://currentmediacompany.com/socialshare--overlay2.gif" />
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://currentmediacompany.com/" />
-<meta property="twitter:title" content="CURRENT MEDIA COMPANY" />
-<meta property="twitter:description" content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services." />
-<meta property="twitter:image" content="https://currentmediacompany.com/socialshare--overlay2.gif" />
+        <meta name="title" content="CURRENT MEDIA COMPANY" />
+        <meta
+          name="description"
+          content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://currentmediacompany.com/" />
+        <meta property="og:title" content="CURRENT MEDIA COMPANY" />
+        <meta
+          property="og:description"
+          content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services."
+        />
+        <meta
+          property="og:image"
+          content="https://currentmediacompany.com/socialshare--overlay2.gif"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://currentmediacompany.com/"
+        />
+        <meta property="twitter:title" content="CURRENT MEDIA COMPANY" />
+        <meta
+          property="twitter:description"
+          content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services."
+        />
+        <meta
+          property="twitter:image"
+          content="https://currentmediacompany.com/socialshare--overlay2.gif"
+        />
         <meta
           name="icon"
           content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services."
@@ -92,7 +109,7 @@ export default function Home({ clientProps, serviceProps }) {
             title="WORK : CURRENT MEDIA COMPANY"
             description="• Our portfolio showcases our dedication to connecting brands with digital content. With 20 years of combined experience in photography, videography, web design, and e-commerce."
           />
-                    <StyleLink
+          <StyleLink
             href="/clients"
             title="VIEW ALL CLIENTS"
             mobileTitle="VIEW ALL CLIENTS"

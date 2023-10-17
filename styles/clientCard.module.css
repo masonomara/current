@@ -46,10 +46,12 @@
   background-color: rgba(33, 37, 38);
   mix-blend-mode: multiply;
   z-index: 2;
+  transition: 200ms ease-out all;
 }
 
 .photo:hover .overlay {
-  opacity: 0.13;
+  opacity: 0.08;
+  transition: 200ms ease-in all;
 }
 
 /* Info Styles */

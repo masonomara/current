@@ -3,6 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../../components/layout";
 import ServiceHero from "../../components/serviceHero";
 import ServiceDescription from "../../components/serviceDescription";
+import Head from "next/head";
 const spaceId = process.env.CONTENTFUL_SPACE_ID;
 const contentfulAccessKey = process.env.CONTENTFUL_ACCESS_KEY;
 const client = createClient({
@@ -58,6 +59,14 @@ export const getStaticProps = async ({ params }) => {
 export default function ServicePage({ service, clientProps }) {
   return (
     <Layout>
+      <Head>
+        <title>{service.fields.title} : Current Media Company</title>
+        <meta
+          name={`${service.fields.title}`}
+          content={`${service.fields.description}`}
+        />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <ServiceHero service={service} />
       <ServiceDescription service={service} clientProps={clientProps}/>
     </Layout>

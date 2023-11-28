@@ -27,14 +27,16 @@ export default function ClientHero({ client }) {
         className={`${styles.wrapper__client} ${styles.video__wrapper}`}
         style={{
           backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`,
+          ...(client.fields.featuredVideoAspectRatio
+            ? { aspectRatio: `${client.fields.featuredVideoAspectRatio}` }
+            : { height: `calc(100vh - 239px)` }),
         }}
       >
         {client.fields.featuredVideo && (
           <>
             <iframe
               className={styles.video__iframe__desktop}
-              src={`https://player.vimeo.com/video/${client.fields.featuredVideo}`}
-              frameBorder="0"
+              src={`https://player.vimeo.com/video/${client.fields.featuredVideo}?controls=1`}
               allow="autoplay"
               title="Current Media Company Video for desktop"
               rel="preconnect"
@@ -46,7 +48,7 @@ export default function ClientHero({ client }) {
             ></iframe>
             <iframe
               className={styles.video__iframe__mobile}
-              src={`https://player.vimeo.com/video/${client.fields.featuredVideo}?background=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
+              src={`https://player.vimeo.com/video/${client.fields.featuredVideo}?controls=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
               frameBorder="0"
               allow="autoplay"
               title="Current Media Company Video for mobile"
@@ -54,6 +56,7 @@ export default function ClientHero({ client }) {
               rel="preconnect"
               webkitallowfullscreen="true"
               mozallowfullscreen="true"
+              aria-controls="1"
               muted={true} // Muted autoplay
               playsInline={true} // Plays inline on iOS
             ></iframe>
@@ -75,9 +78,7 @@ export default function ClientHero({ client }) {
               href={`/services/${service.fields.slug}`}
               target="_top"
             >
-              <span className={`${styles.service}`}>
-                {service.fields.title}
-              </span>
+              <h3 className={`${styles.service}`}>{service.fields.title}</h3>
               {index < client.fields.services.length - 1 && ", "}
             </Link>
           ))}

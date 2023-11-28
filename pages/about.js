@@ -11,7 +11,7 @@ export default function About() {
   return (
     <Layout>
       <Head>
-        <title>ABOUT : CURRENT MEDIA COMPANY</title>
+        <title>About : Current Media Company</title>
         <meta name="description" content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services." />
         <link rel="icon" href="/favicon.ico" />
       </Head>

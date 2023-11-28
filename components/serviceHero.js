@@ -1,6 +1,7 @@
 import styles from "../styles/Hero.module.css";
-import Link from "next/link";
 import { useState, useEffect } from "react";
+
+
 
 export default function ServiceHero({ service }) {
   const [startScroll, setStartScroll] = useState(false);
@@ -30,7 +31,7 @@ export default function ServiceHero({ service }) {
         }}
       />
       <div className={`${styles.wrapper__title}`}>
-        <div className={`${styles.client__title} ${styles.description__last}`}>{service.fields.title}</div>
+        <h1 className={`${styles.client__title} ${styles.description__last}`}>{service.fields.title}</h1>
       </div>
     </>
   );

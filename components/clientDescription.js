@@ -2,7 +2,6 @@ import styles from "../styles/description.module.css";
 import StyleLink from "./styleLink";
 
 export default function ClientDescription({ client }) {
-
   const websiteText = client.fields.website.substring("https://www.".length);
 
   return (
@@ -18,7 +17,126 @@ export default function ClientDescription({ client }) {
           client={true}
           newTab={true}
         />
-          
+        {client.fields.video2 && (
+          <div
+            className={`${styles.wrapper__client} ${styles.video__wrapper}`}
+            style={{
+              backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`,
+              ...(client.fields.featuredVideoAspectRatio
+                ? { aspectRatio: `${client.fields.video2AspectRatio}` }
+                : { height: `calc(100vh - 239px)` }),
+            }}
+          >
+            <>
+              <iframe
+                className={styles.video__iframe__desktop}
+                src={`https://player.vimeo.com/video/${client.fields.video2}?controls=1`}
+                allow="autoplay"
+                title="Current Media Company Video for desktop"
+                rel="preconnect"
+                allowFullScreen={true}
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                muted={true} // Muted autoplay
+                playsInline={true} // Plays inline on iOS
+              ></iframe>
+              <iframe
+                className={styles.video__iframe__mobile}
+                src={`https://player.vimeo.com/video/${client.fields.video2}?controls=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
+                frameBorder="0"
+                allow="autoplay"
+                title="Current Media Company Video for mobile"
+                allowFullScreen={true}
+                rel="preconnect"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                aria-controls="1"
+                muted={true} // Muted autoplay
+                playsInline={true} // Plays inline on iOS
+              ></iframe>
+            </>
+          </div>
+        )}
+        {client.fields.video2 && (
+          <div
+            className={`${styles.wrapper__client} ${styles.video__wrapper}`}
+            style={{
+              backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`,
+              ...(client.fields.featuredVideoAspectRatio
+                ? { aspectRatio: `${client.fields.video3AspectRatio}` }
+                : { height: `calc(100vh - 239px)` }),
+            }}
+          >
+            <>
+              <iframe
+                className={styles.video__iframe__desktop}
+                src={`https://player.vimeo.com/video/${client.fields.video3}?controls=1`}
+                allow="autoplay"
+                title="Current Media Company Video for desktop"
+                rel="preconnect"
+                allowFullScreen={true}
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                muted={true} // Muted autoplay
+                playsInline={true} // Plays inline on iOS
+              ></iframe>
+              <iframe
+                className={styles.video__iframe__mobile}
+                src={`https://player.vimeo.com/video/${client.fields.video3}?controls=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
+                frameBorder="0"
+                allow="autoplay"
+                title="Current Media Company Video for mobile"
+                allowFullScreen={true}
+                rel="preconnect"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                aria-controls="1"
+                muted={true} // Muted autoplay
+                playsInline={true} // Plays inline on iOS
+              ></iframe>
+            </>
+          </div>
+        )}
+        {client.fields.video2 && (
+          <div
+            className={`${styles.wrapper__client} ${styles.video__wrapper}`}
+            style={{
+              backgroundImage: `url('https:${client.fields.featuredImage.fields.file.url}')`,
+              ...(client.fields.featuredVideoAspectRatio
+                ? { aspectRatio: `${client.fields.video4AspectRatio}` }
+                : { height: `calc(100vh - 239px)` }),
+            }}
+          >
+            <>
+              <iframe
+                className={styles.video__iframe__desktop}
+                src={`https://player.vimeo.com/video/${client.fields.video4}?controls=1`}
+                allow="autoplay"
+                title="Current Media Company Video for desktop"
+                rel="preconnect"
+                allowFullScreen={true}
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                muted={true} // Muted autoplay
+                playsInline={true} // Plays inline on iOS
+              ></iframe>
+              <iframe
+                className={styles.video__iframe__mobile}
+                src={`https://player.vimeo.com/video/${client.fields.video4}?controls=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
+                frameBorder="0"
+                allow="autoplay"
+                title="Current Media Company Video for mobile"
+                allowFullScreen={true}
+                rel="preconnect"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                aria-controls="1"
+                muted={true} // Muted autoplay
+                playsInline={true} // Plays inline on iOS
+              ></iframe>
+            </>
+          </div>
+        )}
         <div className={styles.gallery__wrapper}>
           {client.fields.gallery.map((photo) => (
             <div

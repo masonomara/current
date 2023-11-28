@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <Layout>
       <Head>
-        <title>CONTACT : CURRENT MEDIA COMPANY</title>
+        <title>CONTACT : Current Media Company</title>
         <meta name="description" content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services." />
         <link rel="icon" href="/favicon.ico" />
       </Head>

@@ -59,7 +59,7 @@ export default function Work({ clientProps, allServices }) {
     return (
       <Layout>
         <Head>
-          <title>WORK : CURRENT MEDIA COMPANY</title>
+          <title>WORK : Current Media Company</title>
           <meta name="description" content="Connecting brands and people through shared passions. Specializing in photography, videography, websites, and e-commerce services." />
           <link rel="preconnect" href="/favicon.ico" />
         </Head>

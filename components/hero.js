@@ -63,7 +63,7 @@ export default function Hero(props) {
         />
         <div className={styles.video__wrapper}>
           <iframe
-            className={styles.video__iframe__desktop}
+            className={styles.video__iframe__desktop__header}
             src="https://player.vimeo.com/video/859612802?background=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1"
             frameBorder="0"
             allow="autoplay"
@@ -76,7 +76,7 @@ export default function Hero(props) {
             playsInline={true} // Plays inline on iOS
           ></iframe>
           <iframe
-            className={styles.video__iframe__mobile}
+            className={styles.video__iframe__mobile__header}
             src="https://player.vimeo.com/video/859614231?background=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1"
             frameBorder="0"
             allow="autoplay"

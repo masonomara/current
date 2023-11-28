@@ -280,3 +280,46 @@
     height: auto
   }
 }
+
+
+.video__iframe__desktop__header {
+  width: 100%;
+  height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+  min-height: 100vh;
+  min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inherit;
+  border: none;
+}
+.video__iframe__mobile__header {
+  display: none;
+}
+.video__wrapper {
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 36px;
+}
+@media (max-width: 599px) {
+  .video__iframe__mobile__header {
+    min-width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 100vh; /* Given a 16:9 aspect ratio, 9/16*100 = 177.77*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inherit;
+    border: none;
+  }
+  .video__iframe__desktop__header {
+    display: none;
+  }
+}

@@ -42,7 +42,7 @@ export default function ClientDescription({ client }) {
               ></iframe>
               <iframe
                 className={styles.video__iframe__mobile}
-                src={`https://player.vimeo.com/video/${client.fields.video2}?controls=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
+                src={`https://player.vimeo.com/video/${client.fields.video2}?controls=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
                 frameBorder="0"
                 allow="autoplay"
                 title="Current Media Company Video for mobile"
@@ -82,7 +82,7 @@ export default function ClientDescription({ client }) {
               ></iframe>
               <iframe
                 className={styles.video__iframe__mobile}
-                src={`https://player.vimeo.com/video/${client.fields.video3}?controls=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
+                src={`https://player.vimeo.com/video/${client.fields.video3}?controls=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
                 frameBorder="0"
                 allow="autoplay"
                 title="Current Media Company Video for mobile"
@@ -122,7 +122,7 @@ export default function ClientDescription({ client }) {
               ></iframe>
               <iframe
                 className={styles.video__iframe__mobile}
-                src={`https://player.vimeo.com/video/${client.fields.video4}?controls=1&autoplay=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
+                src={`https://player.vimeo.com/video/${client.fields.video4}?controls=1&loop=1&byline=0&title=0&autopause=0?muted=1`}
                 frameBorder="0"
                 allow="autoplay"
                 title="Current Media Company Video for mobile"

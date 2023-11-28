@@ -57,7 +57,7 @@ export default function ClientDescription({ client }) {
             </>
           </div>
         )}
-        {client.fields.video2 && (
+        {client.fields.video3 && (
           <div
             className={`${styles.wrapper__client} ${styles.video__wrapper}`}
             style={{
@@ -97,7 +97,7 @@ export default function ClientDescription({ client }) {
             </>
           </div>
         )}
-        {client.fields.video2 && (
+        {client.fields.video4 && (
           <div
             className={`${styles.wrapper__client} ${styles.video__wrapper}`}
             style={{
